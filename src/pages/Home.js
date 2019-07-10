@@ -46,7 +46,7 @@ function Home() {
       </h1>      
 
       <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
-        <i class="fas fa-hand-point-right"></i> GET CODE
+        <i className="fas fa-hand-point-right"></i> GET CODE
       </div>
 
       <div className="flex-row">
@@ -60,7 +60,7 @@ function Home() {
           onClick={() => {
             setisClicked(!isClicked);
             settitleClass("display-1 text-uppercase m-0 " + optionVal)
-          }} ><i class="fas fa-paw"></i>
+          }} ><i className="fas fa-paw"></i>
           </button>
 
       </div>
