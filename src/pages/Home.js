@@ -36,7 +36,7 @@ function Home() {
   }
 
   return (
-    <header className="App-header">
+    <>
       <p className="mb-0 font-size-14 text-uppercase text-muted max-width-300">
         it's free css animations, you can use it whenever you need
       </p>
@@ -46,7 +46,7 @@ function Home() {
       </h1>      
 
       <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
-        GET CODE
+        <i class="fas fa-hand-point-right"></i> GET CODE
       </div>
 
       <div className="flex-row">
@@ -60,7 +60,7 @@ function Home() {
           onClick={() => {
             setisClicked(!isClicked);
             settitleClass("display-1 text-uppercase m-0 " + optionVal)
-          }} >animate
+          }} ><i class="fas fa-paw"></i>
           </button>
 
       </div>
@@ -84,7 +84,7 @@ function Home() {
 
       <Footer />
 
-    </header>
+    </>
   );
 }
 

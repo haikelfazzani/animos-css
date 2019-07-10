@@ -6,14 +6,16 @@
 body {text-transform: uppercase;}
 
 .nav-link a {
-  color: #8c8c8c;
+  color: #e91e63;
   font-size: 14px;
   font-weight: 600;
+  border-bottom: 2px solid;
   text-decoration: none;
 }
 
 a:hover {
   color: #000000;
+  border-bottom: 2px solid;
 }
 
 
