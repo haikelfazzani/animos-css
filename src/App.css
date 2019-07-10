@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat-Medium.ttf);
+}
+
 body {
   text-transform: uppercase;
 }
@@ -72,15 +77,20 @@ textarea {
   resize: vertical;
 }
 
+img { max-width: 55px; }
+
 
 /* font size and display */
 .font-size-14 { font-size: 14px; }
+
 .font-size-16 { font-size: 18px; }
 
 .display-1 { font-size: 65px; }
 
+.font-bold { font-weight: 600; }
+
 /* Text colors - tranforms */
-.text-muted { color: #8e8e8e; }
+.text-muted { font-family: Montserrat; color: #8e8e8e; }
 
 .text-uppercase { text-transform: uppercase; }
 
@@ -94,6 +104,15 @@ textarea {
 .mt-20 { margin-top: 20px; }
 
 
+/* Color and background */
+.bg-dark {
+  background-color: #292929;
+  padding: 20px;
+  border-radius: 5px;
+  color: wheat;
+}
+
+.color-rose { color: #E91E63; }
 
 @media screen and (max-width: 600px) {
 

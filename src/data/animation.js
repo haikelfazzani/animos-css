@@ -1,5 +1,29 @@
 const codeAnimation = [
   {
+    name: "spin",
+    clx: `.spin {
+      animation: spin infinite 20s linear;
+    }`,
+    keyframe: `@-webkit-keyframes spin {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }   
+    `
+  },
+  {
     name: "flipInX",
     clx: `.flipInX {
       -webkit-backface-visibility: visible !important;
@@ -8,8 +32,6 @@ const codeAnimation = [
       animation-name: flipInX;
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
     }`,
     keyframe: `@-webkit-keyframes flipInX {
       0% {
@@ -49,12 +71,10 @@ const codeAnimation = [
   {
     name: "bounce",
     clx: `.bounce { 
-      -webkit-animation-name: bounce; 
-      animation-name: bounce; 
-      -webkit-animation-duration: 1s;
+    -webkit-animation-name: bounce; 
+    animation-name: bounce; 
+    -webkit-animation-duration: 1s;
      animation-duration: 1s;
-     -webkit-animation-fill-mode: both;
-     animation-fill-mode: both;
    }`,
     keyframe: `@-webkit-keyframes bounce { 
       0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
@@ -75,8 +95,6 @@ const codeAnimation = [
       animation-name: fadeIn;
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
     }`,
     keyframe: `@-webkit-keyframes fadeIn {
       0% {opacity: 0;}
@@ -95,8 +113,6 @@ const codeAnimation = [
       animation-name: pulse;
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
     }`,
     keyframe: `@-webkit-keyframes pulse {
       0% { -webkit-transform: scale(1); }
@@ -118,8 +134,6 @@ const codeAnimation = [
       animation-name: shake; 
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
     }`,
     keyframe: `@-webkit-keyframes shake {
       0%, 100% {-webkit-transform: translateX(0);} 

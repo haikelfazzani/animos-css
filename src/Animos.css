@@ -1,10 +1,8 @@
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.spin {
+  animation: spin infinite 20s linear;
 }
 
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
@@ -37,12 +35,8 @@
      transform: perspective(400px) rotateX(90deg); 
      opacity: 0;
   }
-  40% {
-     transform: perspective(400px) rotateX(-10deg);
-  }
-  70% {
-     transform: perspective(400px) rotateX(10deg);
-  }
+  40% {transform: perspective(400px) rotateX(-10deg);}
+  70% {transform: perspective(400px) rotateX(10deg);}
   100% {
      transform: perspective(400px) rotateX(0deg);
      opacity: 1;
@@ -56,8 +50,6 @@
   animation-name: flipInX;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
 }
 
 
@@ -78,9 +70,7 @@
    -webkit-animation-name: bounce; 
    animation-name: bounce; 
    -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+   animation-duration: 1s;
 }
 
 
@@ -101,8 +91,6 @@
    animation-name: fadeIn;
    -webkit-animation-duration: 1s;
    animation-duration: 1s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
 }
 
 /* Pulse */
@@ -123,8 +111,6 @@
    animation-name: pulse;
    -webkit-animation-duration: 1s;
    animation-duration: 1s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
 }
 
 
@@ -146,6 +132,4 @@
    animation-name: shake; 
    -webkit-animation-duration: 1s;
    animation-duration: 1s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
 }
