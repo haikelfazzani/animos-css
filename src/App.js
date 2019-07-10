@@ -65,14 +65,14 @@ function App() {
 
         <div className="flex-column">
           <textarea
-            className="mt-20"
+            className="font-size-16 mt-20"
             value={showCode ? code : "-"}
             onChange={handleChangeTxtArea}
             hidden={!showCode}
           />
 
           <textarea
-            className="mt-20"
+            className="font-size-16 mt-20"
             value={showCode ? keyFrame : "-"}
             onChange={handleChangeTxtArea}
             hidden={!showCode}

@@ -27,10 +27,10 @@ body {
   justify-content: center;
 }
 
-button {
-  background-color: inherit;
-  border: 2px solid rgb(61, 61, 61);
-  color: rgb(61, 61, 61);
+button {  
+  background-color: rgb(41, 41, 41);
+  border: 2px solid rgb(41, 41, 41);
+  color: #ffffff;
   transition: all 0.4s ease-in;
 }
 
@@ -48,14 +48,17 @@ select, button {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
+  outline: none;
 }
 
+option { font-size: 14px; }
 
 button:hover {
-  background-color: rgb(41, 41, 41);
-  border: 2px solid rgb(41, 41, 41);
-  color: #ffffff;
+  background-color: inherit;
+  border: 2px solid rgb(61, 61, 61);
+  color: rgb(61, 61, 61);
 }
 
 textarea {
@@ -72,6 +75,7 @@ textarea {
 
 /* font size and display */
 .font-size-14 { font-size: 14px; }
+.font-size-16 { font-size: 18px; }
 
 .display-1 { font-size: 65px; }
 
@@ -105,4 +109,10 @@ textarea {
     height: auto;
     resize: auto;
   }
+
+  select, button { font-size: 12px; padding: 5px 10px; }
+
+  .display-1 { font-size: 25px; }
+
+  .font-size-16 { font-size: 14px; }
 }
