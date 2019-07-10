@@ -1,4 +1,4 @@
-const options = [
+const animOptions = [
   { val: "bounce", txt: "bounce" },
   { val: "fadeIn", txt: "fadeIn" },
   { val: "flipInX", txt: "flipInX" },
@@ -7,4 +7,4 @@ const options = [
   { val: "spin", txt: "spin" },
 ];
 
-export default options;
+export {animOptions};

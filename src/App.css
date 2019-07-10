@@ -3,9 +3,19 @@
   src: url(./fonts/Montserrat-Medium.ttf);
 }
 
-body {
-  text-transform: uppercase;
+body {text-transform: uppercase;}
+
+.nav-link a {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
 }
+
+a:hover {
+  color: #000000;
+}
+
 
 .App {
   text-align: center;
@@ -103,6 +113,8 @@ img { max-width: 55px; }
 
 .mt-20 { margin-top: 20px; }
 
+.mb-0 { margin-bottom: 0; }
+
 
 /* Color and background */
 .bg-dark {
@@ -113,6 +125,23 @@ img { max-width: 55px; }
 }
 
 .color-rose { color: #E91E63; }
+
+.black-border {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.max-width-300 {     max-width: 300px; }
+
+.link-rose {
+  color: #E91E63;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link-rose:hover { color: #000000; }
 
 @media screen and (max-width: 600px) {
 
@@ -131,7 +160,9 @@ img { max-width: 55px; }
 
   select, button { font-size: 12px; padding: 5px 10px; }
 
-  .display-1 { font-size: 25px; }
+  .display-1 { font-size: 35px; }
 
   .font-size-16 { font-size: 14px; }
+
+  img { max-width: 30px;}
 }
