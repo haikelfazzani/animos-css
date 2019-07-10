@@ -10,7 +10,10 @@ import Footer from './components/Footer';
 
 const options = [
   { val: "bounce", txt: "bounce" },
-  { val: "flipInX", txt: "flipInX" }
+  { val: "flipInX", txt: "flipInX" },
+  { val: "fadeIn", txt: "fadeIn" },
+  { val: "pulse", txt: "pulse" },
+  { val: "shake", txt: "shake" }
 ];
 
 
@@ -35,7 +38,7 @@ function App() {
   }, [optionVal])
 
   function handleChangeTxtArea() {
-    
+
   }
 
   return (
@@ -44,8 +47,8 @@ function App() {
         <h1 className={isClicked ? titleClass : "display-1 text-uppercase m-0"}>Animos.css</h1>
         <p className="m-0 mb-20 font-size-14 text-uppercase text-muted">
           An easy css animation library <button className="btn-link" onClick={() => {
-              setShowCode(!showCode)
-            }}>GET CODE</button>
+            setShowCode(!showCode)
+          }}>GET CODE</button>
         </p>
 
         <div className="flex-row">
@@ -65,14 +68,14 @@ function App() {
 
         <div className="flex-column">
           <textarea
-            className="font-size-16 mt-20"
+            className="flipInX font-size-16 mt-20"
             value={showCode ? code : "-"}
             onChange={handleChangeTxtArea}
             hidden={!showCode}
           />
 
           <textarea
-            className="font-size-16 mt-20"
+            className="flipInX font-size-16 mt-20"
             value={showCode ? keyFrame : "-"}
             onChange={handleChangeTxtArea}
             hidden={!showCode}
@@ -81,7 +84,7 @@ function App() {
 
         <Footer />
 
-      </header>      
+      </header>
 
     </div>
   );
