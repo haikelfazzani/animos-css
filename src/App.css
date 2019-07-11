@@ -148,6 +148,8 @@ textarea {
   border-radius: 5px;
 }
 
+.max-width-600 { max-width: 600px;}
+
 .max-width-300 {     max-width: 300px; }
 
 /* *********** */
@@ -243,4 +245,6 @@ button:hover {
   .font-size-16 { font-size: 14px; }
 
   img { max-width: 30px;}
+
+  .max-width-600 { max-width: 200px;}
 }

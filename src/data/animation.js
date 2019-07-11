@@ -99,8 +99,8 @@ const codeAnimation = [
     .fadeIn {
       -webkit-animation-name: fadeIn;
       animation-name: fadeIn;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
     }`,
     keyframe: `
     @-webkit-keyframes fadeIn {

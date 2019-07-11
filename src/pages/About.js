@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
   return (
     <div className="flex-column">
-      <p style={{ maxWidth: "500px" }}>
+      <p className="max-width-600">
         Hi, my name is Haikel Fazzani, i'm web developer specialized in nodejs and reactjs.
       </p>
 

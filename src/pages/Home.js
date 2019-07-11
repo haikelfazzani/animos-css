@@ -11,14 +11,7 @@ import codeAnimation from '../data/animation';
 import Option from '../components/Option';
 import Footer from '../components/Footer';
 
-
-function copyToClipboard(event, elmnt, setElement) {
-  elmnt.current.select();
-  document.execCommand('copy');
-  event.target.focus();
-
-  setElement('Copied!');
-}
+import copyToClipboard from "../service/copy";
 
 function Home() {
 
