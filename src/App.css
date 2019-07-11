@@ -64,12 +64,13 @@ option { font-size: 14px; }
 
 textarea {
   margin: 0px;
-  height: 100px;
+  height: 170px;
   width: 735px;
   background-color: #292929;
   color: white;
   border-radius: 5px;
   resize: vertical;
+  position: relative;
 }
 
 
@@ -82,6 +83,14 @@ textarea {
   align-items: center;
   justify-content: center;
 }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .font-size-14 { font-size: 14px; }
 
@@ -107,13 +116,15 @@ textarea {
 
 .ml-10 { margin-left: 10px !important; }
 
-.m-0 { margin: 0; }
+.m-0 { margin: 0 !important; }
 
-.mb-20 { margin-bottom: 20px; }
+.mb-20 { margin-bottom: 20px !important; }
 
-.mt-20 { margin-top: 20px; }
+.mt-20 { margin-top: 20px !important; }
 
-.mb-0 { margin-bottom: 0; }
+.mt-10 { margin-top: 10px !important; }
+
+.mb-0 { margin-bottom: 0 !important; }
 
 
 /* *********** */
@@ -192,6 +203,19 @@ button:hover {
   color: #ff1d6a;
   background-color: inherit;
   border: 0;
+}
+
+
+.btn-black {
+  align-self: flex-end;
+  background-color: white;
+  color: #292929;
+  padding: 5px 25px;
+}
+
+.btn-black:hover {  
+  background-color: #292929;
+  color: #ffffff;
 }
 
 /* *********** */

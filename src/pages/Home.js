@@ -12,6 +12,14 @@ import Option from '../components/Option';
 import Footer from '../components/Footer';
 
 
+function copyToClipboard(event, elmnt, setElement) {
+  elmnt.current.select();
+  document.execCommand('copy');
+  event.target.focus();
+
+  setElement('Copied!');
+}
+
 function Home() {
 
   let [optionVal, setOptionVal] = useState("bounce");
@@ -23,6 +31,11 @@ function Home() {
   const [keyFrame, setKeyFrame] = useState(codeAnimation[0].keyframe);
 
 
+  const [isClassCopied, setIsClassCopied] = useState('copy');
+  const [isKeyFrameCopied, setIsKeyFrameCopied] = useState('copy');
+  const textAreaClass = React.useRef(null);
+  const textAreaKeyFrame = React.useRef(null);
+
   useEffect(() => {
 
     setisClicked(false);
@@ -30,20 +43,25 @@ function Home() {
     setCode(codeAnimation.find(c => c.name === optionVal.trim()).clx);
     setKeyFrame(codeAnimation.find(c => c.name === optionVal.trim()).keyframe);
 
-  }, [optionVal])
+    if (showCode) {
+      setIsClassCopied("copy");
+      setIsKeyFrameCopied("copy");
+    }
+
+  }, [optionVal]);
 
   function handleChange(e) {
   }
 
   return (
     <>
-      <p className="mb-0 font-size-14 text-uppercase text-muted max-width-300 rotate-X360">
+      <p className="mb-0 font-size-14 text-uppercase text-muted max-width-300 rotate-x360">
         it's free css animations, you can use it whenever you need
       </p>
 
       <h1 className={isClicked ? titleClass : "display-1 text-uppercase m-0"}>
         Anim<img src={Logo} alt="" />s<span className="color-rose">.css</span>
-      </h1>      
+      </h1>
 
       <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
         <i className="fas fa-hand-point-right shake-right"></i> GET CODE
@@ -61,25 +79,41 @@ function Home() {
             setisClicked(!isClicked);
             settitleClass("display-1 text-uppercase m-0 " + optionVal)
           }} ><i className="fas fa-paw"></i>
-          </button>
+        </button>
 
       </div>
 
 
       <div className="flex-column">
+
+        <button className="btn-black text-uppercase font-size-14 mt-10"
+          onClick={(e) => copyToClipboard(e, textAreaClass, setIsClassCopied)}
+          hidden={!showCode}>
+          {isClassCopied}
+        </button>
+
         <textarea
-          className="flipInX font-size-16 mt-20"
+          className="flipInX font-size-16"
           value={showCode ? code : "-"}
           onChange={handleChange}
           hidden={!showCode}
+          ref={textAreaClass}
         />
 
+        <button className="btn-black text-uppercase font-size-14 mt-10"
+          onClick={(e) => copyToClipboard(e, textAreaKeyFrame, setIsKeyFrameCopied)}
+          hidden={!showCode}>
+          {isKeyFrameCopied}
+        </button>
+
         <textarea
-          className="flipInX font-size-16 mt-20"
+          className="flipInX font-size-16"
           value={showCode ? keyFrame : "-"}
           onChange={handleChange}
           hidden={!showCode}
+          ref={textAreaKeyFrame}
         />
+
       </div>
 
       <Footer />
