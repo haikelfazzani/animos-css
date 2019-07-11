@@ -23,6 +23,7 @@ const codeAnimation = [
     name: "spin",
     clx: `
     .spin {
+      -webkit-animation: spin infinite 20s linear;
       animation: spin infinite 20s linear;
     }`,
     keyframe: `
