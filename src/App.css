@@ -194,6 +194,7 @@ button {
   background-color: rgb(41, 41, 41);
   border: 2px solid rgb(41, 41, 41);
   color: #ffffff;
+  text-transform: uppercase;
   transition: all 0.3s ease-in;
 }
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
-import Home from './pages/Home';
 import About from './pages/About';
 import More from './pages/More';
+import SnackBar from './pages/SnackBar';
+import Animations from './pages/Animations';
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
         <header className={theme}>
 
           <div className="nav-link mb-20">
-            <Link to="/" exact="true">Home</Link>
+            <Link to="/" exact="true">Animations</Link>
+            <Link to="/snack" className="ml-20">SnackBar</Link>
             <Link to="/about" className="ml-20">About</Link>
             <Link to="/more" className="ml-20">More</Link>
             <button className="simple-link ml-10"
@@ -29,7 +31,9 @@ function App() {
             </button>
           </div>
 
-          <Route exact path="/" component={Home} />
+          
+          <Route exact path="/" component={Animations} />
+          <Route exact path="/snack" component={SnackBar} />
           <Route exact path="/about" component={About} />
           <Route exact path="/more" component={More} />
           <Route render={() => <Redirect to="/" />} />

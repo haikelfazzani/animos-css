@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 
 import copyToClipboard from "../service/copy";
 
-function Home() {
+function Animations() {
 
   let [optionVal, setOptionVal] = useState("bounce");
   let [titleClass, settitleClass] = useState("display-1 text-uppercase m-0");
@@ -119,5 +119,5 @@ function Home() {
   );
 }
 
-export default Home;
+export default Animations;
 
