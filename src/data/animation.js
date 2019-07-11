@@ -3,78 +3,20 @@ const codeAnimation = [
     name: "heartBeat",
     clx: `
     .heartBeat {
-      -webkit-animation-name: heartBeat;
-      animation-name: heartBeat;
-      -webkit-animation-duration: 4s;
-      animation-duration: 4s;
+      animation: heartBeat infinite .5s linear;
+      -webkit-animation: heartBeat infinite .5s linear;
     }`,
     keyframe: `
     @-webkit-keyframes heartBeat {
-      0% { -webkit-transform: scale(1); }
-      5% { -webkit-transform: scale(1.1); }
-   
-      10% { -webkit-transform: scale(1); }
-      15% { -webkit-transform: scale(1.1); }
-   
-      20% { -webkit-transform: scale(1); }
-      25% { -webkit-transform: scale(1.1); }
-   
-      30% { -webkit-transform: scale(1); }
-      35% { -webkit-transform: scale(1.1); }
-   
-      40% { -webkit-transform: scale(1); }
-      45% { -webkit-transform: scale(1.1); }
-   
-      50% { -webkit-transform: scale(1); }
-      55% { -webkit-transform: scale(1.1); }
-   
-      60% { -webkit-transform: scale(1); }
-      65% { -webkit-transform: scale(1.1); }
-   
-      70% { -webkit-transform: scale(1); }
-      75% { -webkit-transform: scale(1.1); }
-   
-      80% { -webkit-transform: scale(1); }
-      85% { -webkit-transform: scale(1.1); }
-   
-      90% { -webkit-transform: scale(1); }
-      95% { -webkit-transform: scale(1.1); }
-   
-      100% { -webkit-transform: scale(1); }
+      from { -webkit-transform: scale(1); }
+      50% { -webkit-transform: scale(1.1); }
+      to { -webkit-transform: scale(1); }
     }
    
     @keyframes heartBeat {
-      0% { transform: scale(1); }
-      5% { transform: scale(1.1); }
-   
-      10% { transform: scale(1); }
-      15% { transform: scale(1.1); }
-   
-      20% { transform: scale(1); }
-      25% { transform: scale(1.1); }
-   
-      30% { transform: scale(1); }
-      35% { transform: scale(1.1); }
-   
-      40% { transform: scale(1); }
-      45% { transform: scale(1.1); }
-   
-      50% { transform: scale(1); }
-      55% { transform: scale(1.1); }
-   
-      60% { transform: scale(1); }
-      65% { transform: scale(1.1); }
-   
-      70% { transform: scale(1); }
-      75% { transform: scale(1.1); }
-   
-      80% { transform: scale(1); }
-      85% { transform: scale(1.1); }
-   
-      90% { transform: scale(1); }
-      95% { transform: scale(1.1); }
-   
-      100% { transform: scale(1); }
+      from { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      to { transform: scale(1); }
     }`
   },
   {

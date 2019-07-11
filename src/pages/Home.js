@@ -19,8 +19,8 @@ function Home() {
   let [titleClass, settitleClass] = useState("display-1 text-uppercase m-0");
   let [isClicked, setisClicked] = useState(false);
 
-  const [code, setCode] = useState(codeAnimation[0].clx);
   const [showCode, setShowCode] = useState(false);
+  const [code, setCode] = useState(codeAnimation[0].clx);  
   const [keyFrame, setKeyFrame] = useState(codeAnimation[0].keyframe);
 
 
