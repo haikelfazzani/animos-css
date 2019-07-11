@@ -133,3 +133,100 @@
    -webkit-animation-duration: 1s;
    animation-duration: 1s;
 }
+
+/* Shake right */
+@-webkit-keyframes shake-right {
+   from {-webkit-transform: translateX(0);}    
+   to {-webkit-transform: translateX(10px);} 
+}
+
+@keyframes shake-right { 
+   from {transform: translateX(0);}    
+   to {transform: translateX(10px);} 
+}
+
+.shake-right { 
+   -webkit-animation-name: shake; 
+   animation-name: shake; 
+   -webkit-animation-duration: 3s;
+   animation-duration: 3s;
+}
+
+/***********************************
+               Rotate  Y
+************************************/
+
+/* rotate-y180 */
+@-webkit-keyframes rotate-y180 {
+   from { -webkit-transform: rotateY(0); }
+   to { -webkit-transform: rotateY(180deg); }
+}
+
+@keyframes rotate-y180 {
+   from {  transform:rotateY(0); }
+   to {  transform:rotateY(180deg); }
+}
+
+.rotate-y180 {
+   -webkit-animation-name: rotate-y180;
+   animation-name: rotate-y180;
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
+}
+
+/* rotate-y360 */
+@-webkit-keyframes rotate-y360 {
+   from { -webkit-transform: rotateY(0); }
+   to { -webkit-transform: rotateY(360deg); }
+}
+
+@keyframes rotate-y360 {
+   from {  transform:rotateY(0); }
+   to {  transform:rotateY(360deg); }
+}
+
+.rotate-y360 {
+   -webkit-animation-name: rotate-y360;
+   animation-name: rotate-y360;
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
+}
+
+/***********************************
+               Rotate  X
+************************************/
+/* rotate-x180 */
+@-webkit-keyframes rotate-x180 {
+   from { -webkit-transform: rotateX(0); }
+   to { -webkit-transform: rotateX(180deg); }
+}
+
+@keyframes rotate-x180 {
+   from {  transform:rotateX(0); }
+   to {  transform:rotateX(180deg); }
+}
+
+.rotate-x180 {
+   -webkit-animation-name: rotate-x180;
+   animation-name: rotate-x180;
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
+}
+
+/* rotate-x360 */
+@-webkit-keyframes rotate-x360 {
+   from { -webkit-transform: rotateX(0); }
+   to { -webkit-transform: rotateX(360deg); }
+}
+
+@keyframes rotate-x360 {
+   from {  transform:rotateX(0); }
+   to {  transform:rotateX(360deg); }
+}
+
+.rotate-x360 {
+   -webkit-animation-name: rotate-x360;
+   animation-name: rotate-x360;
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
+}

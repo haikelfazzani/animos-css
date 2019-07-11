@@ -7,15 +7,26 @@ import More from './pages/More';
 
 function App() {
 
+  const [changeThme, setChangeThme] = React.useState(false)
+  const [theme, setTheme] = React.useState("App-header");
+
+  React.useEffect(() => {
+    changeThme ? setTheme("App-header-dark") : setTheme("App-header");
+  }, [changeThme])
+
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        <header className={theme}>
 
           <div className="nav-link mb-20">
             <Link to="/" exact="true">Home</Link>
             <Link to="/about" className="ml-20">About</Link>
             <Link to="/more" className="ml-20">More</Link>
+            <button className="simple-link ml-10"
+              onClick={() => setChangeThme(!changeThme)}>
+              <i className="fas fa-quidditch"></i>
+            </button>
           </div>
 
           <Route exact path="/" component={Home} />

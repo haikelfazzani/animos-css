@@ -37,7 +37,7 @@ function Home() {
 
   return (
     <>
-      <p className="mb-0 font-size-14 text-uppercase text-muted max-width-300">
+      <p className="mb-0 font-size-14 text-uppercase text-muted max-width-300 rotate-X360">
         it's free css animations, you can use it whenever you need
       </p>
 
@@ -46,7 +46,7 @@ function Home() {
       </h1>      
 
       <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
-        <i className="fas fa-hand-point-right"></i> GET CODE
+        <i className="fas fa-hand-point-right shake-right"></i> GET CODE
       </div>
 
       <div className="flex-row">

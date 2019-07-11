@@ -34,32 +34,22 @@ a:hover {
   font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.flex-row {
-  flex-direction: row;
+.App-header-dark {
+  background-color: #282c34 !important;
+  color: #ffffff !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: calc(10px + 2vmin);
 }
 
-button {  
-  background-color: rgb(41, 41, 41);
-  border: 2px solid rgb(41, 41, 41);
-  color: #ffffff;
-  transition: all 0.4s ease-in;
-}
+img { max-width: 55px; }
 
-.btn-link {
-  padding: 0;
-  margin: 0;
-  background-color: inherit;
-  border: 0;
-  color: #E91E63;
-  font-size: 15px;
-  font-weight: 600;
-}
+/* *********** */
+/* Forms - inputs - select - options */
+/* *********** */
 
 select, button {
   padding: 10px 20px;
@@ -72,27 +62,27 @@ select, button {
 
 option { font-size: 14px; }
 
-button:hover {
-  background-color: inherit;
-  border: 2px solid rgb(61, 61, 61);
-  color: rgb(61, 61, 61);
-}
-
 textarea {
   margin: 0px;
   height: 100px;
   width: 735px;
   background-color: #292929;
   color: white;
-  padding: 20px;
   border-radius: 5px;
   resize: vertical;
 }
 
-img { max-width: 55px; }
 
-
+/* *********** */
 /* font size and display */
+/* *********** */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .font-size-14 { font-size: 14px; }
 
 .font-size-16 { font-size: 18px; }
@@ -103,13 +93,19 @@ img { max-width: 55px; }
 
 .font-bold { font-weight: 600; }
 
+/* *********** */
 /* Text colors - tranforms */
+/* *********** */
 .text-muted { font-family: Montserrat; color: #8e8e8e; }
 
 .text-uppercase { text-transform: uppercase; }
 
-/* margins */
-.ml-20 { margin-left: 20px; }
+/* *********** */
+/* Margins and Paddings */
+/* *********** */
+.ml-20 { margin-left: 20px !important; }
+
+.ml-10 { margin-left: 10px !important; }
 
 .m-0 { margin: 0; }
 
@@ -120,7 +116,9 @@ img { max-width: 55px; }
 .mb-0 { margin-bottom: 0; }
 
 
+/* *********** */
 /* Color and background */
+/* *********** */
 .bg-dark {
   background-color: #292929;
   padding: 20px;
@@ -130,6 +128,9 @@ img { max-width: 55px; }
 
 .color-rose { color: #E91E63; }
 
+/* *********** */
+/* Border */
+/* *********** */
 .black-border {
   border: 1px solid #000;
   padding: 10px;
@@ -137,6 +138,38 @@ img { max-width: 55px; }
 }
 
 .max-width-300 {     max-width: 300px; }
+
+/* *********** */
+/* Button and  Links */
+/* *********** */
+.App-link {
+  color: #61dafb;
+}
+
+
+button {  
+  background-color: rgb(41, 41, 41);
+  border: 2px solid rgb(41, 41, 41);
+  color: #ffffff;
+  transition: all 0.4s ease-in;
+}
+
+button:hover {
+  background-color: inherit;
+  border: 2px solid rgb(61, 61, 61);
+  color: rgb(61, 61, 61);
+}
+
+
+.btn-link {
+  padding: 0;
+  margin: 0;
+  background-color: inherit;
+  border: 0;
+  color: #E91E63;
+  font-size: 15px;
+  font-weight: 600;
+}
 
 .link-rose {
   color: #E91E63;
@@ -147,6 +180,23 @@ img { max-width: 55px; }
 
 .link-rose:hover { color: #000000; }
 
+.simple-link {
+  background-color: inherit;
+  border: 0;
+  color: #E91E63;
+  padding: 0;
+  margin: 0;
+}
+
+.simple-link:hover {
+  color: #ff1d6a;
+  background-color: inherit;
+  border: 0;
+}
+
+/* *********** */
+/* media */
+/* *********** */
 @media screen and (max-width: 600px) {
 
   .flex-column {
