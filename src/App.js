@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom
 
 import About from './pages/About';
 import More from './pages/More';
-import SnackBar from './pages/SnackBar';
 import Animations from './pages/Animations';
+import Notifications from './pages/Notifications';
 
 function App() {
 
@@ -20,20 +20,21 @@ function App() {
       <div className="App">
         <header className={theme}>
 
-          <div className="nav-link mb-20">
-            <Link to="/" exact="true">Animations</Link>
-            <Link to="/snack" className="ml-20">SnackBar</Link>
-            <Link to="/about" className="ml-20">About</Link>
-            <Link to="/more" className="ml-20">More</Link>
-            <button className="simple-link ml-10"
+          <ul className="nav-link flex-row mb-20">
+            <li><Link to="/" exact="true">Animations</Link></li>
+            <li><Link to="/notifications" className="ml-20">Notifications</Link></li>
+            <li><Link to="/about" className="ml-20">About</Link></li>
+            <li><Link to="/more" className="ml-20">More</Link></li>
+            <li><button className="simple-link ml-10"
               onClick={() => setChangeThme(!changeThme)}>
               <i className="fas fa-quidditch"></i>
             </button>
-          </div>
+            </li>
+          </ul>
 
-          
+
           <Route exact path="/" component={Animations} />
-          <Route exact path="/snack" component={SnackBar} />
+          <Route exact path="/notifications" component={Notifications} />
           <Route exact path="/about" component={About} />
           <Route exact path="/more" component={More} />
           <Route render={() => <Redirect to="/" />} />

@@ -1,41 +1,89 @@
+.snackbar, .toast { text-transform: initial; }
+
+/***********************************
+            Snackbar
+************************************/
 .snackbar {
   visibility: hidden; 
   min-width: 250px;
   margin: auto;
-  background-color: #333;
+  background-color: #292929c2;
   color: #fff; 
   text-align: center;
   font-size: 16px;
-  border-radius: 2px; 
+  border-radius: 5px; 
   padding: 16px;
   position: fixed; 
-  z-index: 1; 
+  z-index: 999; 
   /*left: 50%; */
   bottom: 30px; 
 }
 
 .snackbar.show {
   visibility: visible; 
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  -webkit-animation: ExpandFadeIn 0.5s, ExpandFadeOut 0.5s 2.5s;
+  animation: ExpandFadeIn 0.5s, ExpandFadeOut 0.5s 2.5s;
 }
 
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
+@-webkit-keyframes ExpandFadeIn {
+  from { min-width: 0; bottom: 0; opacity: 0; } 
+  to { min-width: 250px; bottom: 30px; opacity: 1; }
 }
 
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+@keyframes ExpandFadeIn {
+  from { min-width: 0; bottom: 0; opacity: 0; }
+  to { min-width: 250px; bottom: 30px; opacity: 1; }
 }
 
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
+@-webkit-keyframes ExpandFadeOut {
+  from { min-width: 250px; bottom: 30px; opacity: 1; } 
+  to { min-width: 0; bottom: 0; opacity: 0; }
 }
 
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+@keyframes ExpandFadeOut {
+  from { min-width: 250px; bottom: 30px; opacity: 1; }
+  to { min-width: 0; bottom: 0; opacity: 0; }
+}
+
+/***********************************
+            toast
+************************************/
+.toast {
+  visibility: hidden; 
+  width: 20%;
+  background-color: #292929c2;
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+
+.toast p { font-size: 14px; }
+
+.toast.show {
+  visibility: visible; 
+  -webkit-animation: FadeIn 0.5s, FadeOut 0.5s 2.5s;
+  animation: FadeIn 0.5s, FadeOut 0.5s 2.5s;
+}
+
+@-webkit-keyframes FadeIn {
+  from { top: 0; opacity: 0; } 
+  to { top: 30px; opacity: 1; }
+}
+
+@keyframes FadeIn {
+  from {top: 0; opacity: 0; }
+  to { top: 30px; opacity: 1; }
+}
+
+@-webkit-keyframes FadeOut {
+  from { top: 30px; opacity: 1; } 
+  to { top: 0; opacity: 0; }
+}
+
+@keyframes FadeOut {
+  from { top: 30px; opacity: 1; }
+  to { top: 0; opacity: 0; }
 }
