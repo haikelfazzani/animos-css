@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="mt-20 mb-20">
 
       <p className="text-muted font-size-14">
-        <span>Made with ❤ Haikel Fazzani</span>   
+        <span>Made with ❤ BY Haikel Fazzani</span>   
       </p>
 
     </div>
