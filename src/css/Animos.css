@@ -1,5 +1,5 @@
 /***********************************
-               spin
+            Spin
 ************************************/
 .spin {
   animation: spin infinite 20s linear;
@@ -15,7 +15,7 @@
 }
 
 /***********************************
-               Flip in
+            Flip in X and Y
 ************************************/
 /* Flip in x */
 @-webkit-keyframes flipInX {
@@ -99,7 +99,7 @@
 }
 
 /***********************************
-               Bounce
+            Bounce
 ************************************/
 @-webkit-keyframes bounce { 
    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
@@ -122,7 +122,7 @@
 
 
 /***********************************
-               Fade in
+            Fade in and out
 ************************************/
 @-webkit-keyframes fadeIn {
    0% {opacity: 0;}
@@ -137,13 +137,35 @@
 .fadeIn {
    -webkit-animation-name: fadeIn;
    animation-name: fadeIn;
-   -webkit-animation-duration: 2s;
-   animation-duration: 2s;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+/* Fade out */
+@-webkit-keyframes fadeOut {
+   from {opacity: 1} 
+   to {opacity:0}
+}
+   
+@keyframes fadeOut {
+   from {opacity: 1} 
+   to {opacity: 0}
 }
 
 
+.fadeOut {
+   -webkit-animation-name: fadeOut;
+   animation-name: fadeOut;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
 /***********************************
-               pulse
+            Pulse
 ************************************/
 @-webkit-keyframes pulse {
    0% { -webkit-transform: scale(1); }
@@ -164,9 +186,86 @@
    animation-duration: 1s;
 }
 
+/***********************************
+            Heart Beat
+************************************/
+@-webkit-keyframes heartBeat {
+   0% { -webkit-transform: scale(1); }
+   5% { -webkit-transform: scale(1.1); }
+
+   10% { -webkit-transform: scale(1); }
+   15% { -webkit-transform: scale(1.1); }
+
+   20% { -webkit-transform: scale(1); }
+   25% { -webkit-transform: scale(1.1); }
+
+   30% { -webkit-transform: scale(1); }
+   35% { -webkit-transform: scale(1.1); }
+
+   40% { -webkit-transform: scale(1); }
+   45% { -webkit-transform: scale(1.1); }
+
+   50% { -webkit-transform: scale(1); }
+   55% { -webkit-transform: scale(1.1); }
+
+   60% { -webkit-transform: scale(1); }
+   65% { -webkit-transform: scale(1.1); }
+
+   70% { -webkit-transform: scale(1); }
+   75% { -webkit-transform: scale(1.1); }
+
+   80% { -webkit-transform: scale(1); }
+   85% { -webkit-transform: scale(1.1); }
+
+   90% { -webkit-transform: scale(1); }
+   95% { -webkit-transform: scale(1.1); }
+
+   100% { -webkit-transform: scale(1); }
+}
+
+@keyframes heartBeat {
+   0% { transform: scale(1); }
+   5% { transform: scale(1.1); }
+
+   10% { transform: scale(1); }
+   15% { transform: scale(1.1); }
+
+   20% { transform: scale(1); }
+   25% { transform: scale(1.1); }
+
+   30% { transform: scale(1); }
+   35% { transform: scale(1.1); }
+
+   40% { transform: scale(1); }
+   45% { transform: scale(1.1); }
+
+   50% { transform: scale(1); }
+   55% { transform: scale(1.1); }
+
+   60% { transform: scale(1); }
+   65% { transform: scale(1.1); }
+
+   70% { transform: scale(1); }
+   75% { transform: scale(1.1); }
+
+   80% { transform: scale(1); }
+   85% { transform: scale(1.1); }
+
+   90% { transform: scale(1); }
+   95% { transform: scale(1.1); }
+
+   100% { transform: scale(1); }
+}
+
+.heartBeat {
+   -webkit-animation-name: heartBeat;
+   animation-name: heartBeat;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
+}
 
 /***********************************
-               Shake
+            Shake
 ************************************/
 @-webkit-keyframes shake {
    0%, 100% {-webkit-transform: translateX(0);} 
@@ -208,7 +307,7 @@
 
 
 /***********************************
-               Rotate  Y
+            Rotate  Y180 and Y360
 ************************************/
 /* rotate-y180 */
 @-webkit-keyframes rotate-y180 {
@@ -248,7 +347,7 @@
 
 
 /***********************************
-               Rotate  X
+            Rotate  X180 and X360
 ************************************/
 /* rotate-x180 */
 @-webkit-keyframes rotate-x180 {

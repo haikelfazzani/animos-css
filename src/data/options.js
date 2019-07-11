@@ -1,8 +1,12 @@
 const animOptions = [
   { val: "bounce", txt: "bounce" },
   { val: "fadeIn", txt: "fadeIn" },
+  { val: "fadeOut", txt: "fadeOut" },
+
   { val: "flipInX", txt: "flipInX" },
   { val: "flipInY", txt: "flipInY" },
+
+  { val: "heartBeat", txt: "heartBeat" },
 
   { val: "rotate-x180", txt: "rotate-x180" },
   { val: "rotate-x360", txt: "rotate-x360" },

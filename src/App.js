@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -32,6 +32,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/more" component={More} />
+          <Route render={() => <Redirect to="/" />} />
 
         </header>
       </div>

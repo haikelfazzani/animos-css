@@ -1,5 +1,83 @@
 const codeAnimation = [
   {
+    name: "heartBeat",
+    clx: `
+    .heartBeat {
+      -webkit-animation-name: heartBeat;
+      animation-name: heartBeat;
+      -webkit-animation-duration: 4s;
+      animation-duration: 4s;
+    }`,
+    keyframe: `
+    @-webkit-keyframes heartBeat {
+      0% { -webkit-transform: scale(1); }
+      5% { -webkit-transform: scale(1.1); }
+   
+      10% { -webkit-transform: scale(1); }
+      15% { -webkit-transform: scale(1.1); }
+   
+      20% { -webkit-transform: scale(1); }
+      25% { -webkit-transform: scale(1.1); }
+   
+      30% { -webkit-transform: scale(1); }
+      35% { -webkit-transform: scale(1.1); }
+   
+      40% { -webkit-transform: scale(1); }
+      45% { -webkit-transform: scale(1.1); }
+   
+      50% { -webkit-transform: scale(1); }
+      55% { -webkit-transform: scale(1.1); }
+   
+      60% { -webkit-transform: scale(1); }
+      65% { -webkit-transform: scale(1.1); }
+   
+      70% { -webkit-transform: scale(1); }
+      75% { -webkit-transform: scale(1.1); }
+   
+      80% { -webkit-transform: scale(1); }
+      85% { -webkit-transform: scale(1.1); }
+   
+      90% { -webkit-transform: scale(1); }
+      95% { -webkit-transform: scale(1.1); }
+   
+      100% { -webkit-transform: scale(1); }
+    }
+   
+    @keyframes heartBeat {
+      0% { transform: scale(1); }
+      5% { transform: scale(1.1); }
+   
+      10% { transform: scale(1); }
+      15% { transform: scale(1.1); }
+   
+      20% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+   
+      30% { transform: scale(1); }
+      35% { transform: scale(1.1); }
+   
+      40% { transform: scale(1); }
+      45% { transform: scale(1.1); }
+   
+      50% { transform: scale(1); }
+      55% { transform: scale(1.1); }
+   
+      60% { transform: scale(1); }
+      65% { transform: scale(1.1); }
+   
+      70% { transform: scale(1); }
+      75% { transform: scale(1.1); }
+   
+      80% { transform: scale(1); }
+      85% { transform: scale(1.1); }
+   
+      90% { transform: scale(1); }
+      95% { transform: scale(1.1); }
+   
+      100% { transform: scale(1); }
+    }`
+  },
+  {
     name: "spin",
     clx: `
     .spin {
@@ -140,8 +218,10 @@ const codeAnimation = [
     .fadeIn {
       -webkit-animation-name: fadeIn;
       animation-name: fadeIn;
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s;
+      -webkit-animation-duration: 4s;
+      animation-duration: 4s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
     }`,
     keyframe: `
     @-webkit-keyframes fadeIn {
@@ -152,6 +232,28 @@ const codeAnimation = [
     @keyframes fadeIn {
       0% {opacity: 0;}
       100% {opacity: 1;}
+    }`
+  },
+  {
+    name: "fadeOut",
+    clx: `
+    .fadeOut {
+      -webkit-animation-name: fadeOut;
+      animation-name: fadeOut;
+      -webkit-animation-duration: 4s;
+      animation-duration: 4s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }`,
+    keyframe: `
+    @-webkit-keyframes fadeOut {
+      from {opacity: 1} 
+      to {opacity:0}
+    }
+      
+    @keyframes fadeOut {
+      from {opacity: 1} 
+      to {opacity: 0}
     }`
   },
   {
