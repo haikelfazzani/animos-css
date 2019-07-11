@@ -4,7 +4,7 @@ import { animOptions } from '../data/options';
 import '../App.css';
 import '../css/Animos.css';
 
-import Logo from '../images/logo.png';
+import Logo from '../images/logo-rose.png';
 
 import codeAnimation from '../data/animation';
 
