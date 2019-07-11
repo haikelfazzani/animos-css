@@ -68,8 +68,49 @@ const codeAnimation = [
          transform: perspective(400px) rotateX(0deg);
          opacity: 1;
       }
-    }    
-    `
+    }`
+  },
+  {
+    name: "flipInY",
+    clx: `
+    .flipInY {
+      -webkit-backface-visibility: visible !important;
+      -webkit-animation-name: flipInY;
+      backface-visibility: visible !important;
+      animation-name: flipInY;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+    }`,
+    keyframe: `
+    @-webkit-keyframes flipInY {
+      0% {
+         -webkit-transform: perspective(400px) rotateY(90deg);
+         opacity: 0;
+      }
+      40% {
+         -webkit-transform: perspective(400px) rotateY(-10deg);
+      }
+      70% {
+         -webkit-transform: perspective(400px) rotateY(10deg);
+      }
+      100% {
+         -webkit-transform: perspective(400px) rotateY(0deg);
+         opacity: 1;
+      }
+    }
+    
+    @keyframes flipInY {
+      0% {
+         transform: perspective(400px) rotatey(90deg); 
+         opacity: 0;
+      }
+      40% { transform: perspective(400px) rotatey(-10deg); }
+      70% { transform: perspective(400px) rotatey(10deg); }
+      100% {
+         transform: perspective(400px) rotatey(0deg);
+         opacity: 1;
+      }
+    }`
   },
   {
     name: "bounce",

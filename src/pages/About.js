@@ -8,15 +8,15 @@ export default function About() {
       </p>
 
       <div className="flex-row font-size-50">
-        <a href="https://github.com/haikelfazzani">
+        <a className="social-link" href="https://github.com/haikelfazzani">
           <i className="fab fa-facebook-square"></i>
         </a>
 
-        <a href="https://github.com/haikelfazzani">
+        <a className="social-link" href="https://github.com/haikelfazzani">
           <i className="fab fa-twitter-square ml-20"></i>
         </a>
 
-        <a href="https://github.com/haikelfazzani">
+        <a className="social-link" href="https://github.com/haikelfazzani">
           <i className="fab fa-github-square ml-20"></i>
         </a>
 

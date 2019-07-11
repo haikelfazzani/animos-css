@@ -48,7 +48,7 @@ function Home() {
 
   return (
     <>
-      <p className="mb-0 font-size-14 text-uppercase text-muted max-width-300 rotate-x360">
+      <p className="mb-0 font-size-14 text-uppercase text-muted max-width-300">
         it's free css animations, you can use it whenever you need
       </p>
 
@@ -77,35 +77,39 @@ function Home() {
       </div>
 
 
-      <div className="flex-column">
+      <div className="flex-column w-100 mt-20">
 
-        <button className="btn-black text-uppercase font-size-14 mt-10"
-          onClick={(e) => copyToClipboard(e, textAreaClass, setIsClassCopied)}
-          hidden={!showCode}>
-          {isClassCopied}
-        </button>
+        <div className="code-container w-60">
+          <button className="btn-black text-uppercase font-size-14"
+            onClick={(e) => copyToClipboard(e, textAreaClass, setIsClassCopied)}
+            hidden={!showCode}>
+            {isClassCopied}
+          </button>
 
-        <textarea
-          className="flipInX font-size-16"
-          value={showCode ? code : "-"}
-          onChange={handleChange}
-          hidden={!showCode}
-          ref={textAreaClass}
-        />
+          <textarea
+            className="code-box flipInX font-size-16"
+            value={showCode ? code : "-"}
+            onChange={handleChange}
+            hidden={!showCode}
+            ref={textAreaClass}
+          />
+        </div>
 
-        <button className="btn-black text-uppercase font-size-14 mt-10"
-          onClick={(e) => copyToClipboard(e, textAreaKeyFrame, setIsKeyFrameCopied)}
-          hidden={!showCode}>
-          {isKeyFrameCopied}
-        </button>
+        <div className="code-container w-60">
+          <button className="btn-black text-uppercase font-size-14"
+            onClick={(e) => copyToClipboard(e, textAreaKeyFrame, setIsKeyFrameCopied)}
+            hidden={!showCode}>
+            {isKeyFrameCopied}
+          </button>
 
-        <textarea
-          className="flipInX font-size-16"
-          value={showCode ? keyFrame : "-"}
-          onChange={handleChange}
-          hidden={!showCode}
-          ref={textAreaKeyFrame}
-        />
+          <textarea
+            className="code-box flipInX font-size-16"
+            value={showCode ? keyFrame : "-"}
+            onChange={handleChange}
+            hidden={!showCode}
+            ref={textAreaKeyFrame}
+          />
+        </div>
 
       </div>
 

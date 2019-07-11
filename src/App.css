@@ -62,18 +62,44 @@ select, button {
 
 option { font-size: 14px; }
 
-textarea {
-  margin: 0px;
-  height: 170px;
-  width: 735px;
-  background-color: #292929;
-  color: white;
-  border-radius: 5px;
-  resize: vertical;
+
+/* *********** */
+/* code box */
+/* *********** */
+.code-container {
   position: relative;
 }
 
+.code-box {
+  position: relative;
+  padding: 1em;
+  min-height: 180px;
+  line-height: 1.25;
+  background-color: #292929;
+  color: #ffffff;
+  border-radius: 2px;
 
+  border: 0;
+  width: 90%;
+  resize: vertical;
+  box-shadow: 0 2px 15px 0 rgba(103, 100, 100, 0.94);
+  margin-top: 20px;
+}
+
+.btn-black {  
+  background-color: white;
+  color: #292929;
+  padding: 5px 25px;
+  position: absolute;
+  top:30px;
+  right: 50px;
+  z-index: 999;
+}
+
+.btn-black:hover {  
+  background-color: #292929;
+  color: #ffffff;
+}
 /* *********** */
 /* font size and display */
 /* *********** */
@@ -152,19 +178,23 @@ textarea {
 
 .max-width-300 {     max-width: 300px; }
 
+.w-100 { width: 100% !important; }
+
+.w-70 { width: 70% !important; }
+
+.w-60 { width: 60% !important; }
+
+.w-50 { width: 50% !important; }
+
 /* *********** */
 /* Button and  Links */
 /* *********** */
-.App-link {
-  color: #61dafb;
-}
-
 
 button {  
   background-color: rgb(41, 41, 41);
   border: 2px solid rgb(41, 41, 41);
   color: #ffffff;
-  transition: all 0.4s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 button:hover {
@@ -207,17 +237,11 @@ button:hover {
   border: 0;
 }
 
-
-.btn-black {
-  align-self: flex-end;
-  background-color: white;
-  color: #292929;
-  padding: 5px 25px;
-}
-
-.btn-black:hover {  
-  background-color: #292929;
-  color: #ffffff;
+.social-link {
+  text-decoration: none;
+  border: 0 !important;
+  padding: 0;
+  color: #E91E63;
 }
 
 /* *********** */
@@ -231,12 +255,7 @@ button:hover {
     justify-content: center;
     align-items: center;
   }
-
-  textarea {    
-    width: auto;
-    height: auto;
-    resize: auto;
-  }
+  
 
   select, button { font-size: 12px; padding: 5px 10px; }
 
@@ -247,4 +266,5 @@ button:hover {
   img { max-width: 30px;}
 
   .max-width-600 { max-width: 200px;}
+  .w-60 { width: 90% !important; }
 }
