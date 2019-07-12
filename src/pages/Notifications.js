@@ -18,8 +18,7 @@ export default function Notifications() {
 
   function myFunction() {
 
-    setIsClicked(!isClicked);
-      setShowCode(false);
+      setIsClicked(!isClicked);
 
       if (optionVal === "snackbar") {
         setSnackClass("snackbar show")
@@ -44,7 +43,7 @@ export default function Notifications() {
       </p>
 
       <div className="flex-row">
-        <div className="link-rose mb-20" onClick={() => setShowCode(true)}>
+        <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
           <i className="fas fa-hand-point-right shake-right"></i> GET CODE
         </div>
       </div>
@@ -64,9 +63,8 @@ export default function Notifications() {
 
       <div className="code-container w-60">
 
-
         <TextArea
-          code={isClicked && codeNotifications.find((c, idx) => c.name === optionVal).clx}
+          code={codeNotifications.find((c, idx) => c.name === optionVal).clx}
           handleChange={handleChange}
           isHide={!showCode}
         />
