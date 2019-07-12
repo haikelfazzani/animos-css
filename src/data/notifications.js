@@ -44,50 +44,7 @@ const codeNotifications = [
       from { min-width: 250px; bottom: 30px; opacity: 1; }
       to { min-width: 0; bottom: 0; opacity: 0; }
     }`
-  },
-  {
-    name: "snackbar-w100",
-    clx: `
-    .snackbar-w100 {
-      visibility: hidden; 
-      min-width: 100%;
-      background-color: #292929c2;
-      color: #fff; 
-      font-size: 14px;
-      text-align: center;
-      padding: 16px;
-      position: fixed; 
-      z-index: 999;
-      bottom: 0; 
-    }
-    
-    .snackbar-w100.show {
-      visibility: visible; 
-      -webkit-animation: FadeInW 0.5s, FadeOutW 0.5s 2.5s;
-      animation: FadeInW 0.5s, FadeOutW 0.5s 2.5s;
-    }
-    
-    /* keyframe: */
-    @-webkit-keyframes FadeInW {
-      from { bottom:-30px; opacity: 0; } 
-      to { bottom:0; opacity: 1; }
-    }
-    
-    @keyframes FadeInW {
-      from { bottom:-30px; opacity: 0; }
-      to { bottom:0; opacity: 1; }
-    }
-    
-    @-webkit-keyframes FadeOutW {
-      from {bottom:0; opacity: 1; } 
-      to { bottom:-60px; opacity: 0; }
-    }
-    
-    @keyframes FadeOutW {
-      from { bottom:0; opacity: 1; }
-      to { bottom:-60px; opacity: 0; }
-    }`
-  },
+  },  
   {
     name: "toast",
     clx: `

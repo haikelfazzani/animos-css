@@ -5,6 +5,7 @@ import About from './pages/About';
 import More from './pages/More';
 import Animations from './pages/Animations';
 import Notifications from './pages/Notifications';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -40,6 +41,8 @@ function App() {
           <Route render={() => <Redirect to="/" />} />
 
         </header>
+
+        <Footer />
       </div>
     </Router>
   );

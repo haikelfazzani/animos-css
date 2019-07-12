@@ -9,7 +9,6 @@ import Logo from '../images/logo-rose.png';
 import codeAnimation from '../data/animation';
 
 import Option from '../components/Option';
-import Footer from '../components/Footer';
 
 import copyToClipboard from "../service/copy";
 
@@ -77,7 +76,7 @@ function Animations() {
       </div>
 
 
-      <div className="flex-column w-100 mt-20">
+      <div className="flex-column w-100 mt-20 mb-120">
 
         <div className="code-container w-60">
           <button className="btn-black text-uppercase font-size-14"
@@ -113,7 +112,7 @@ function Animations() {
 
       </div>
 
-      <Footer />
+      
 
     </>
   );

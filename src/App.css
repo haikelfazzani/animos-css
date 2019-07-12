@@ -5,6 +5,14 @@
 
 body {text-transform: uppercase;}
 
+footer {
+  width: 100%;
+  background-color: #282c34;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+}
 /* Navbar */
 .nav-link {
   list-style: none;
@@ -161,6 +169,7 @@ option { font-size: 14px; }
 
 .mt-10 { margin-top: 10px !important; }
 
+.mb-120 { margin-bottom: 120px; }
 .mb-0 { margin-bottom: 0 !important; }
 
 .p-0 { padding: 0; }

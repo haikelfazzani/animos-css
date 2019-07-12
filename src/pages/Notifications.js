@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../css/snackbar.css';
 import TextArea from '../components/TextArea';
 import codeNotifications from '../data/notifications';
-import copyToClipboard from "../service/copy";
 
 export default function Notifications() {
 
-  const [txtCopy, setTxtCopy] = useState("copy")
-
-  const [snackLongStyle, setSnackLongStyle] = useState("snackbar-w100")
   const [toastClass, setToastClass] = useState("toast")
   const [snackClass, setSnackClass] = useState("snackbar")
   const [optionVal, setOptionVal] = useState("snackbar");
@@ -30,11 +26,6 @@ export default function Notifications() {
         setToastClass("toast show")
         setTimeout(() => { setToastClass("toast") }, 3000);
         break;
-
-      default :
-        setSnackLongStyle("snackbar-w100 show")
-        setTimeout(() => { setSnackLongStyle("snackbar-w100") }, 3000);
-        break;
       }
          
   }
@@ -49,7 +40,7 @@ export default function Notifications() {
 
       <div className="flex-row">
         <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
-          <i class="fas fa-laptop-code"></i> GET CODE
+          <i className="fas fa-laptop-code"></i> GET CODE
         </div>
       </div>
 
@@ -57,7 +48,6 @@ export default function Notifications() {
 
         <select onChange={(e) => setOptionVal(e.target.value)}>
           <option value="snackbar">snackbar</option>
-          <option value="snackbar-w100">snackbar-w100</option>
           <option value="toast">toast</option>
         </select>
 
@@ -76,7 +66,6 @@ export default function Notifications() {
       </div>
 
 
-      <div className={snackLongStyle}>Lorem ipsum dolor sit amet....</div>
       <div className={snackClass}>Lorem ipsum dolor sit amet....</div>
       <div className={toastClass}>
         <h5 className="m-0 p-0">Toast title</h5>
