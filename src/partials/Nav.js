@@ -7,6 +7,8 @@ export default function Nav() {
   const [changeThme, setChangeThme] = useState(false);
   const [theme, setTheme] = useState({ back: "#282c34", color: "#fff" });
 
+  const [showDrop, setShowDrop] = useState(false)
+
   React.useEffect(() => {
     changeThme ? setTheme({ back: "#fff", color: "#000" }) :
       setTheme({ back: "#282c34", color: "#fff" });
@@ -19,23 +21,25 @@ export default function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
 
-      
-      <button className="navbar-toggler" type="button" data-toggle="collapse" 
-      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-      aria-expanded="false" aria-label="Toggle navigation">
+      <Link to="/" exact="true" className="navbar-toggler nav-link color-rose">
+        <img className="img-logo" src={Logo} alt="" /> Animos.css
+      </Link>
+
+      <button className="navbar-toggler" type="button" 
+      onClick={() => setShowDrop(!showDrop)}>
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse" style={{ display : showDrop ? "block" :"none"}}>
         <ul className="navbar-nav mr-auto mx-auto">
 
-        <li className="nav-item active">
-        <Link to="/" exact="true" className="nav-link color-rose mx-auto">
-        <img className="img-logo" src={Logo} alt="" /> Animos.css
-      </Link>
+          <li className="nav-item">
+            <Link to="/" exact="true" className="nav-link color-rose">
+              <img className="img-logo" src={Logo} alt="" /> Animos.css
+            </Link>
           </li>
 
-          <li className="nav-item active">
+          <li className="nav-item">
             <Link to="/" exact="true" className="nav-link">Animations</Link>
           </li>
 
