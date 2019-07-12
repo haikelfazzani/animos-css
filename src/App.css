@@ -3,7 +3,17 @@
   src: url(./fonts/Montserrat-Medium.ttf);
 }
 
-body {text-transform: uppercase;}
+@font-face {
+  font-family: Pacifico-Regular;
+  src: url(./fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+  font-family: Raleway-Regular;
+  src: url(./fonts/Raleway-Regular.ttf);
+}
+
+body { font-family: Raleway-Regular;  text-transform: uppercase;}
 
 footer {
   width: 100%;
@@ -13,6 +23,8 @@ footer {
   position: fixed;
   bottom: 0;
 }
+
+h1 { font-family: Pacifico-Regular; }
 /* Navbar */
 nav {
   display: flex;
@@ -63,7 +75,7 @@ nav {
   justify-content: center;
 }
 
-img { max-width: 55px; }
+img { max-width: 60px; }
 
 /* *********** */
 /* Forms - inputs - select - options */

@@ -18,9 +18,9 @@ export default function Nav({setTheme}) {
         <li><Link to="/more" className="ml-20">More</Link></li>
 
         <li>
-          <button className="simple-link ml-20"
-            onClick={() => setChangeThme(!changeThme)}><i className="fas fa-quidditch"></i>
-          </button>
+          <Link className="simple-link ml-20"
+            onClick={() => setChangeThme(!changeThme)}><i class="fas fa-fill-drip"></i>
+          </Link>
         </li>
 
       </ul>

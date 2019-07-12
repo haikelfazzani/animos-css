@@ -5,8 +5,8 @@ import About from './pages/About';
 import More from './pages/More';
 import Animations from './pages/Animations';
 import Notifications from './pages/Notifications';
-import Footer from './components/Footer';
-import Nav from './components/Nav';
+import Footer from './partials/Footer';
+import Nav from './partials/Nav';
 
 function App() {
 
