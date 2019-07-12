@@ -20,6 +20,50 @@ const codeAnimation = [
     }`
   },
   {
+    name: "bounce",
+    clx: `
+    .bounce { 
+      -webkit-animation-name: bounce; 
+      animation-name: bounce; 
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+    }`,
+    keyframe: `
+    @-webkit-keyframes bounce { 
+      0%, 20%, 50%, 80%, 100% { -webkit-transform: translateY(0); } 
+      40% { -webkit-transform: translateY(-30px); } 
+      60% { -webkit-transform: translateY(-15px); } 
+    } 
+   
+    @keyframes bounce { 
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 
+      40% { transform: translateY(-30px); } 
+      60% { transform: translateY(-15px); } 
+    }`
+  },
+  {
+    name: "BounceOutUp",
+    clx: `
+    .BounceOutUp {
+      -webkit-animation-name: BounceOutUp;
+      animation-name: BounceOutUp;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+    }`,
+    keyframe: `
+    @-webkit-keyframes BounceOutUp {
+      20% { -webkit-transform: translate3d(0, -60px, 0); }    
+       40%, 45% { opacity: 1; -webkit-transform: translate3d(0, 30px, 0); }    
+       100% {opacity: 0; -webkit-transform: translate3d(0, -800px, 0); }
+    }
+   
+    @keyframes BounceOutUp {
+      20% { transform: translate3d(0, -60px, 0); }    
+      40%, 45% { opacity: 1; transform: translate3d(0, 30px, 0); }    
+      100% { opacity: 0; transform: translate3d(0, -800px, 0); }
+    }`
+  },
+  {
     name: "spin",
     clx: `
     .spin {
@@ -88,29 +132,7 @@ const codeAnimation = [
       70% { transform: perspective(400px) rotatey(10deg); }
       100% { transform: perspective(400px) rotatey(0deg); opacity: 1; }
     }`
-  },
-  {
-    name: "bounce",
-    clx: `
-    .bounce { 
-      -webkit-animation-name: bounce; 
-      animation-name: bounce; 
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
-    }`,
-    keyframe: `
-    @-webkit-keyframes bounce { 
-      0%, 20%, 50%, 80%, 100% { -webkit-transform: translateY(0); } 
-      40% { -webkit-transform: translateY(-30px); } 
-      60% { -webkit-transform: translateY(-15px); } 
-    } 
-   
-    @keyframes bounce { 
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 
-      40% { transform: translateY(-30px); } 
-      60% { transform: translateY(-15px); } 
-    }`
-  },
+  },  
   {
     name: "fadeIn",
     clx: `

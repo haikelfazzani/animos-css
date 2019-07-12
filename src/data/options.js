@@ -1,5 +1,7 @@
 const animOptions = [
   { val: "bounce", txt: "bounce" },
+  { val: "BounceOutUp", txt: "BounceOutUp" },
+
   { val: "fadeIn", txt: "fadeIn" },
   { val: "fadeOut", txt: "fadeOut" },
 

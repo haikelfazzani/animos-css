@@ -34,7 +34,7 @@ export default function Notifications() {
 
   return (
     <>
-      <p className="lead text-muted max-w40 mx-auto">
+      <p className="lead text-muted mx-auto">
         Push notifications to your visitors with a Toast or an Snackbar.
       </p>
 

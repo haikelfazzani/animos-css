@@ -84,7 +84,7 @@ function Animations() {
           </button>
 
           <textarea
-            className="code-box flipInX font-size-16"
+            className="code-box flipInX"
             value={showCode ? code : "-"}
             onChange={handleChange}
             hidden={!showCode}
@@ -100,7 +100,7 @@ function Animations() {
           </button>
 
           <textarea
-            className="code-box flipInX font-size-16"
+            className="code-box flipInX"
             value={showCode ? keyFrame : "-"}
             onChange={handleChange}
             hidden={!showCode}

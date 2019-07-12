@@ -17,8 +17,8 @@ function App() {
 
       <div className="container mt-5 mb-5">
 
-        <section class="jumbotron text-center">
-          <div class="container">
+        <section className="jumbotron text-center">
+          <div className="container">
             <Route exact path="/" component={Animations} />
             <Route exact path="/notifications" component={Notifications} />
             <Route exact path="/about" component={About} />
