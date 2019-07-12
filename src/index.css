@@ -44,8 +44,7 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bott
   text-transform: uppercase;  
 }
 
-.navbar-nav {  line-height: 2;}
-
+.navbar-nav {  line-height: 2; }
 
 .navbar, footer {
   background-color: #282c34 !important;
@@ -54,6 +53,23 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bott
 
 .fixed-bottom { z-index: 1; }
 
-p { font-size: 14px; max-width: 500px; text-align: center; margin: auto; margin-bottom: 10px; font-weight: 100; }
+p { font-size: 14px; 
+  max-width: 500px; 
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px; 
+  font-weight: 100; 
+}
 
 .max-w40 { max-width: 40%;}
+
+
+@media screen and (max-width: 600px) {
+  h1, .cover-heading { 
+    font-family: Pacifico-Regular; 
+    font-size: 30px; 
+    margin-bottom: 20px; 
+  }
+
+  p { font-size: 14px !important; }
+}
