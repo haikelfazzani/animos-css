@@ -1,23 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/snackbar.css';
+import TextArea from '../components/TextArea';
+import codeNotifications from '../data/notifications';
+import copyToClipboard from "../service/copy";
 
 export default function Notifications() {
 
+  const [txtCopy, setTxtCopy] = useState("copy")
+
+  const [snackLongStyle, setSnackLongStyle] = useState("snackbar-w100")
   const [toastClass, setToastClass] = useState("toast")
   const [snackClass, setSnackClass] = useState("snackbar")
   const [optionVal, setOptionVal] = useState("snackbar");
 
+  const [isClicked, setIsClicked] = useState(false);
+  const [showCode, setShowCode] = useState(false)
+
   function myFunction() {
-    if(optionVal === "snackbar") {
-      setSnackClass("snackbar show")
-      setTimeout(() => { setSnackClass("snackbar") }, 3000);
-    }
-    else {
-      setToastClass("toast show")
-      setTimeout(() => { setToastClass("toast") }, 3000);
-    }
-    
+
+    setIsClicked(!isClicked);
+      setShowCode(false);
+
+      if (optionVal === "snackbar") {
+        setSnackClass("snackbar show")
+        setTimeout(() => { setSnackClass("snackbar") }, 3000);
+      }
+      else if (optionVal === "toast") {
+        setToastClass("toast show")
+        setTimeout(() => { setToastClass("toast") }, 3000);
+      }
+      else {
+        setSnackLongStyle("snackbar-w100 show")
+        setTimeout(() => { setSnackLongStyle("snackbar-w100") }, 3000);
+      }    
   }
+
+  let handleChange = () => console.log("handleChange");
 
   return (
     <>
@@ -26,7 +44,7 @@ export default function Notifications() {
       </p>
 
       <div className="flex-row">
-        <div className="link-rose mb-20">
+        <div className="link-rose mb-20" onClick={() => setShowCode(true)}>
           <i className="fas fa-hand-point-right shake-right"></i> GET CODE
         </div>
       </div>
@@ -35,6 +53,7 @@ export default function Notifications() {
 
         <select onChange={(e) => setOptionVal(e.target.value)}>
           <option value="snackbar">snackbar</option>
+          <option value="snackbar-w100">snackbar-w100</option>
           <option value="toast">toast</option>
         </select>
 
@@ -42,6 +61,19 @@ export default function Notifications() {
 
       </div>
 
+
+      <div className="code-container w-60">
+
+
+        <TextArea
+          code={isClicked && codeNotifications.find((c, idx) => c.name === optionVal).clx}
+          handleChange={handleChange}
+          isHide={!showCode}
+        />
+      </div>
+
+
+      <div className={snackLongStyle}>Lorem ipsum dolor sit amet....</div>
       <div className={snackClass}>Lorem ipsum dolor sit amet....</div>
       <div className={toastClass}>
         <h5 className="m-0 p-0">Toast title</h5>

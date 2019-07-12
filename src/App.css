@@ -272,7 +272,7 @@ button:hover {
   .nav-link li { align-self: flex-end; margin-bottom: 10px; }
   
 
-  select, button { font-size: 12px; padding: 5px 10px; }
+  select, button { font-size: 14px; padding: 5px 10px; }
 
   .display-1 { font-size: 35px; }
 
