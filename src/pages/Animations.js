@@ -45,11 +45,11 @@ function Animations() {
 
   return (
     <>
-      <h1 class="jumbotron-heading" className={isClicked ? titleClass : "jumbotron-heading"}>
+      <h1 className="jumbotron-heading" className={isClicked ? titleClass : "jumbotron-heading"}>
         Animos<span className="color-rose">.css</span>
       </h1>
 
-      <p class="lead text-muted">
+      <p className="lead text-muted">
         it's free css animations, you can use it whenever you need
           </p>
 

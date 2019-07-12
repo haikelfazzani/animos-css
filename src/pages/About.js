@@ -3,11 +3,11 @@ import React from 'react';
 export default function About() {
   return (
     <>
-      <h5 class="jumbotron-heading">
+      <h5 className="jumbotron-heading">
         Animos<span className="color-rose">.css</span>
       </h5>
 
-      <p class="lead text-muted">
+      <p className="lead text-muted">
         ANY SUGGESTIONS/FEEDBACK IT WOULD BE AWESOME IF YOU GAVE ME
       A SHOUT AT HAIKEL.FAZZANI@GMAIL.COM OR...
           </p>
