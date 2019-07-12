@@ -17,14 +17,15 @@ function App() {
 
       <div className="container mt-5 mb-5">
 
-        <main role="main" className="inner cover">
-          <Route exact path="/" component={Animations} />
-          <Route exact path="/notifications" component={Notifications} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/more" component={More} />
-          <Route render={() => <Redirect to="/" />} />
-        </main>
-        
+        <section class="jumbotron text-center">
+          <div class="container">
+            <Route exact path="/" component={Animations} />
+            <Route exact path="/notifications" component={Notifications} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/more" component={More} />
+            <Route render={() => <Redirect to="/" />} />
+          </div>
+        </section>
       </div>
 
       <Footer />

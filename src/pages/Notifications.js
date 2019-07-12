@@ -34,7 +34,7 @@ export default function Notifications() {
 
   return (
     <>
-      <p className="text-muted max-w40 mx-auto">
+      <p className="lead text-muted max-w40 mx-auto">
         Push notifications to your visitors with a Toast or an Snackbar.
       </p>
 
@@ -47,11 +47,11 @@ export default function Notifications() {
       </div>
       
 
-      <button className="btn btn-primary mb-3" onClick={() => setShowCode(!showCode)}>
+      <button className="btn btn-secondary mb-3" onClick={() => setShowCode(!showCode)}>
         <i className="fas fa-laptop-code"></i>
       </button> 
 
-      <button className="btn btn-dark mb-3 ml-3" onClick={myFunction}>
+      <button className="btn btn-rose mb-3 ml-3" onClick={myFunction}>
         <i className="fas fa-bell"></i>
       </button>
 

@@ -30,6 +30,8 @@ body {
 
 .container { position: relative; }
 
+.jumbotron { background-color: initial !important; }
+
 h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bottom: 20px; }
 
 .text-muted, .nav-link { color: #a0a0a0 !important; }
@@ -52,6 +54,6 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bott
 
 .fixed-bottom { z-index: 1; }
 
-p { font-weight: 100; }
+p { font-size: 14px; max-width: 500px; text-align: center; margin: auto; margin-bottom: 10px; font-weight: 100; }
 
 .max-w40 { max-width: 40%;}

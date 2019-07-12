@@ -38,7 +38,11 @@
   z-index: 999;
 }
 
-
+.btn-rose {
+  color: #ffffff !important;
+  background-color: #E91E63 !important;
+  border-color: #c51954 !important;
+}
 
 .social-link {
   font-size: 45px;

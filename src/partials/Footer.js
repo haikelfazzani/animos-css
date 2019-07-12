@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
     return (
       <footer className="fixed-bottom mt-auto py-3" style={!this.state.display ? this.state.style : {}}>
         <div className="inner">
-          <p className="text-muted font-s14 m-0">
+          <p className="text-muted font-s14 m-0 mx-auto">
             ❤ CREATED BY HAIKEL FAZZANI ©2019
         </p>
         </div>

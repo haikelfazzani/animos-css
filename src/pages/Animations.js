@@ -13,7 +13,7 @@ import copyToClipboard from "../service/copy";
 function Animations() {
 
   let [optionVal, setOptionVal] = useState("bounce");
-  let [titleClass, settitleClass] = useState("cover-heading");
+  let [titleClass, settitleClass] = useState("jumbotron-heading");
   let [isClicked, setisClicked] = useState(false);
 
   const [showCode, setShowCode] = useState(false);
@@ -44,37 +44,35 @@ function Animations() {
   }
 
   return (
-    <>      
-      <h1 className={isClicked ? titleClass : "cover-heading"}>
+    <>
+      <h1 class="jumbotron-heading" className={isClicked ? titleClass : "jumbotron-heading"}>
         Animos<span className="color-rose">.css</span>
       </h1>
 
-      <p className="text-muted mx-auto w-25">
+      <p class="lead text-muted">
         it's free css animations, you can use it whenever you need
-      </p>
-
-      <div className="flex-row">
-
-        <div className="form-group w-25 mx-auto">
-          <select className="form-control" onChange={(e) => setOptionVal(e.target.value)}>
-            {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
-          </select>
-        </div>
+          </p>
 
 
-        <button className="btn btn-primary mb-3"
+      <div className="form-group w-25 mx-auto">
+        <select className="form-control" onChange={(e) => setOptionVal(e.target.value)}>
+          {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
+        </select>
+      </div>
+
+
+      <p>
+        <button className="btn btn-secondary mb-3"
           onClick={() => setShowCode(!showCode)}><i className="fas fa-code"></i>
         </button>
 
-        <button className="btn btn-dark mb-3 ml-3"
+        <button className="btn btn-rose mb-3 ml-3"
           onClick={() => {
             setisClicked(!isClicked);
             settitleClass("cover-heading " + optionVal)
           }} ><i className="fas fa-paw"></i>
-        </button>        
-
-      </div>
-
+        </button>
+      </p>
 
       <div className="flex-column w-100 mt-20 mb-120">
 
@@ -112,10 +110,7 @@ function Animations() {
 
       </div>
 
-
-
-    </>
-  );
+    </>);
 }
 
 export default Animations;
