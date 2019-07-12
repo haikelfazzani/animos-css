@@ -24,7 +24,7 @@ const codeNotifications = [
       animation: ExpandFadeIn 0.5s, ExpandFadeOut 0.5s 2.5s;
     }
     
-    keyframe: 
+    /* keyframe: */
     @-webkit-keyframes ExpandFadeIn {
       from { min-width: 0; bottom: 0; opacity: 0; } 
       to { min-width: 250px; bottom: 30px; opacity: 1; }
@@ -67,7 +67,7 @@ const codeNotifications = [
       animation: FadeInW 0.5s, FadeOutW 0.5s 2.5s;
     }
     
-    keyframe: 
+    /* keyframe: */
     @-webkit-keyframes FadeInW {
       from { bottom:-30px; opacity: 0; } 
       to { bottom:0; opacity: 1; }
@@ -111,7 +111,7 @@ const codeNotifications = [
       animation: FadeIn 0.5s, FadeOut 0.5s 2.5s;
     }
     
-    keyframe: 
+    /* keyframe: */
     @-webkit-keyframes FadeIn {
       from { top: 0; opacity: 0; } 
       to { top: 30px; opacity: 1; }

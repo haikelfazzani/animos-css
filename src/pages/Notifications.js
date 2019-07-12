@@ -16,25 +16,30 @@ export default function Notifications() {
   const [isClicked, setIsClicked] = useState(false);
   const [showCode, setShowCode] = useState(false)
 
-  function myFunction() {
+  const myFunction = () => {
 
       setIsClicked(!isClicked);
 
-      if (optionVal === "snackbar") {
+      switch (optionVal) {
+        case "snackbar":
         setSnackClass("snackbar show")
-        setTimeout(() => { setSnackClass("snackbar") }, 3000);
-      }
-      else if (optionVal === "toast") {
+        setTimeout(() => { setSnackClass("snackbar") }, 3000);      
+        break;
+
+      case "toast" :
         setToastClass("toast show")
         setTimeout(() => { setToastClass("toast") }, 3000);
-      }
-      else {
+        break;
+
+      default :
         setSnackLongStyle("snackbar-w100 show")
         setTimeout(() => { setSnackLongStyle("snackbar-w100") }, 3000);
-      }    
+        break;
+      }
+         
   }
 
-  let handleChange = () => console.log("handleChange");
+  let handleChange = () =>{};
 
   return (
     <>
@@ -44,7 +49,7 @@ export default function Notifications() {
 
       <div className="flex-row">
         <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
-          <i className="fas fa-hand-point-right shake-right"></i> GET CODE
+          <i class="fas fa-laptop-code"></i> GET CODE
         </div>
       </div>
 

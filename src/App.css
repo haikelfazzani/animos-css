@@ -148,8 +148,10 @@ option { font-size: 14px; }
 /* Margins and Paddings */
 /* *********** */
 .ml-20 { margin-left: 20px !important; }
+.ml-20 { margin-left: 20px !important; }
 
-.ml-10 { margin-left: 10px !important; }
+.mr-20 { margin-right: 20px !important; }
+.mr-10 { margin-right: 10px !important; }
 
 .m-0 { margin: 0 !important; }
 
@@ -173,6 +175,8 @@ option { font-size: 14px; }
 }
 
 .color-rose { color: #E91E63; }
+
+.color-light-black { color: #444444; }
 
 /* *********** */
 /* Border */

@@ -3,8 +3,9 @@ import React from 'react';
 export default function About() {
   return (
     <div className="flex-column">
-      <p className="max-width-600">
-        Hi, my name is Haikel Fazzani, i'm web developer specialized in nodejs and reactjs.
+      <p className="font-size-14 max-width-600">
+      ANY SUGGESTIONS/FEEDBACK IT WOULD BE AWESOME IF YOU GAVE ME 
+      A SHOUT AT HAIKEL.FAZZANI@GMAIL.COM OR...
       </p>
 
       <div className="flex-row font-size-50">
