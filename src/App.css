@@ -14,49 +14,53 @@ footer {
   bottom: 0;
 }
 /* Navbar */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  height: 40px;
+  padding: 10px;
+}
+
 .nav-link {
   list-style: none;
-  width: 90%;
   padding: 0;
 }
+
 .nav-link a {
   color: #e91e63;
   font-size: 14px;
   font-weight: 600;
-  border-bottom: 2px solid;
   text-decoration: none;
 }
 
-.nav-link a:hover {
-  color: #000000;
-  border-bottom: 2px solid;
-}
+.nav-link a:hover, .nav-link a:focus, .nav-link a:active { color: #ffffff; }
 
 
-.App {
+.App {  
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .App-header {
   /*background-color: #282c34;*/
   background-color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
 .App-header-dark {
   background-color: #282c34 !important;
-  color: #ffffff !important;
-  min-height: 100vh;
+  color: #ffffff !important;  
+}
+
+.App-header, .App-header-dark {
+  min-height: 85vh;  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
 img { max-width: 55px; }
@@ -68,7 +72,7 @@ img { max-width: 55px; }
 select, button {
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
