@@ -4,8 +4,6 @@ import { animOptions } from '../data/options';
 import '../App.css';
 import '../css/Animos.css';
 
-import Logo from '../images/logo-rose.png';
-
 import codeAnimation from '../data/animation';
 
 import Option from '../components/Option';
@@ -15,11 +13,11 @@ import copyToClipboard from "../service/copy";
 function Animations() {
 
   let [optionVal, setOptionVal] = useState("bounce");
-  let [titleClass, settitleClass] = useState("display-1 text-uppercase m-0");
+  let [titleClass, settitleClass] = useState("cover-heading");
   let [isClicked, setisClicked] = useState(false);
 
   const [showCode, setShowCode] = useState(false);
-  const [code, setCode] = useState(codeAnimation[0].clx);  
+  const [code, setCode] = useState(codeAnimation[0].clx);
   const [keyFrame, setKeyFrame] = useState(codeAnimation[0].keyframe);
 
 
@@ -46,40 +44,42 @@ function Animations() {
   }
 
   return (
-    <>
-      <p className="mb-0 font-size-14 text-uppercase text-muted max-width-300">
+    <>      
+      <h1 className={isClicked ? titleClass : "cover-heading"}>
+        Animos<span className="color-rose">.css</span>
+      </h1>
+
+      <p className="text-muted mx-auto w-25">
         it's free css animations, you can use it whenever you need
       </p>
 
-      <h1 className={isClicked ? titleClass : "display-1 text-uppercase m-0"}>
-        Anim<img src={Logo} alt="" />s<span className="color-rose">.css</span>
-      </h1>
-
-      <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
-        <i className="fas fa-hand-point-right shake-right"></i> GET CODE
-      </div>
-
       <div className="flex-row">
 
-        <select className="text-uppercase" onChange={(e) => setOptionVal(e.target.value)}>
-          {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
-        </select>
+        <div className="form-group w-25 mx-auto">
+          <select className="form-control" onChange={(e) => setOptionVal(e.target.value)}>
+            {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
+          </select>
+        </div>
 
 
-        <button className="text-uppercase ml-20"
+        <button className="btn btn-primary mb-3"
+          onClick={() => setShowCode(!showCode)}><i className="fas fa-code"></i>
+        </button>
+
+        <button className="btn btn-dark mb-3 ml-3"
           onClick={() => {
             setisClicked(!isClicked);
-            settitleClass("display-1 text-uppercase m-0 " + optionVal)
+            settitleClass("cover-heading " + optionVal)
           }} ><i className="fas fa-paw"></i>
-        </button>
+        </button>        
 
       </div>
 
 
       <div className="flex-column w-100 mt-20 mb-120">
 
-        <div className="code-container w-60">
-          <button className="btn-black text-uppercase font-size-14"
+        <div className="code-container w-75 mx-auto">
+          <button className="btn btn-dark btn-black"
             onClick={(e) => copyToClipboard(e, textAreaClass, setIsClassCopied)}
             hidden={!showCode}>
             {isClassCopied}
@@ -94,8 +94,8 @@ function Animations() {
           />
         </div>
 
-        <div className="code-container w-60">
-          <button className="btn-black text-uppercase font-size-14"
+        <div className="code-container w-75 mx-auto">
+          <button className="btn btn-dark btn-black"
             onClick={(e) => copyToClipboard(e, textAreaKeyFrame, setIsKeyFrameCopied)}
             hidden={!showCode}>
             {isKeyFrameCopied}
@@ -112,7 +112,7 @@ function Animations() {
 
       </div>
 
-      
+
 
     </>
   );

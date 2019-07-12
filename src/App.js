@@ -10,24 +10,24 @@ import Nav from './partials/Nav';
 
 function App() {
 
-  const [theme, setTheme] = React.useState("App-header");
-
   return (
     <Router>
-      <div className="App">
 
-        <Nav setTheme={setTheme} />
+      <Nav />
 
-        <header className={theme}>          
+      <div className="container mt-5 mb-5">
+
+        <main role="main" className="inner cover">
           <Route exact path="/" component={Animations} />
           <Route exact path="/notifications" component={Notifications} />
           <Route exact path="/about" component={About} />
           <Route exact path="/more" component={More} />
           <Route render={() => <Redirect to="/" />} />
-        </header>
-
-        <Footer />
+        </main>
+        
       </div>
+
+      <Footer />
     </Router>
   );
 }

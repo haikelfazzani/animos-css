@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+ * Globals
+ */
+ @font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat-Medium.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@font-face {
+  font-family: Pacifico-Regular;
+  src: url(./fonts/Pacifico-Regular.ttf);
 }
+
+@font-face {
+  font-family: Raleway-Regular;
+  src: url(./fonts/Raleway-Regular.ttf);
+}
+
+html,
+body {
+  height: 100%;  
+}
+
+body {
+  font-family: Raleway-Regular;  
+  text-align: center;
+  text-transform: uppercase; 
+  font-weight: 600; 
+}
+
+.container { position: relative; }
+
+h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bottom: 20px; }
+
+.text-muted, .nav-link { color: #a0a0a0 !important; }
+
+.nav-link:hover, .nav-link:focus, .nav-link:active { color: #ffffff !important; }
+
+.nav-link, .btn-black {    
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;  
+}
+
+.navbar-nav {  line-height: 2;}
+
+
+.navbar, footer {
+  background-color: #282c34 !important;
+  line-height: 2;  
+}
+
+.fixed-bottom { z-index: 1; }
+
+p { font-weight: 100; }
+
+.max-w40 { max-width: 40%;}

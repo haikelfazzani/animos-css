@@ -14,50 +14,50 @@ export default function Notifications() {
 
   const myFunction = () => {
 
-      setIsClicked(!isClicked);
+    setIsClicked(!isClicked);
 
-      switch (optionVal) {
-        case "snackbar":
+    switch (optionVal) {
+      case "snackbar":
         setSnackClass("snackbar show")
-        setTimeout(() => { setSnackClass("snackbar") }, 3000);      
+        setTimeout(() => { setSnackClass("snackbar") }, 3000);
         break;
 
-      case "toast" :
+      case "toast":
         setToastClass("toast show")
         setTimeout(() => { setToastClass("toast") }, 3000);
         break;
-      }
-         
+    }
+
   }
 
-  let handleChange = () =>{};
+  let handleChange = () => { };
 
   return (
     <>
-      <p className="font-size-14 text-uppercase text-muted max-width-300">
+      <p className="text-muted max-w40 mx-auto">
         Push notifications to your visitors with a Toast or an Snackbar.
       </p>
 
-      <div className="flex-row">
-        <div className="link-rose mb-20" onClick={() => setShowCode(!showCode)}>
-          <i className="fas fa-laptop-code"></i> GET CODE
-        </div>
-      </div>
 
-      <div className="flex-row">
-
-        <select onChange={(e) => setOptionVal(e.target.value)}>
+      <div className="form-group w-25 mx-auto">
+        <select className="form-control"  onChange={(e) => setOptionVal(e.target.value)}>
           <option value="snackbar">snackbar</option>
           <option value="toast">toast</option>
         </select>
-
-        <button className="ml-20" onClick={myFunction}><i className="fas fa-bell"></i></button>
-
       </div>
+      
+
+      <button className="btn btn-primary mb-3" onClick={() => setShowCode(!showCode)}>
+        <i className="fas fa-laptop-code"></i>
+      </button> 
+
+      <button className="btn btn-dark mb-3 ml-3" onClick={myFunction}>
+        <i className="fas fa-bell"></i>
+      </button>
 
 
-      <div className="code-container w-60">
-
+      <div className="w-75 mx-auto">
+          
         <TextArea
           code={codeNotifications.find((c, idx) => c.name === optionVal).clx}
           handleChange={handleChange}
