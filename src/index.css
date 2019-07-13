@@ -34,8 +34,9 @@ body {
 
 h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bottom: 20px; }
 
-.text-muted, .nav-link { color: #a0a0a0 !important; }
-
+/*
+  Nav
+*/
 .nav-link:hover, .nav-link:focus, .nav-link:active { color: #ffffff !important; }
 
 .nav-link, .btn-black {    
@@ -51,7 +52,16 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bott
   line-height: 2;  
 }
 
+/* Util */
+.font-s12 { font-size: 12px !important; }
+.font-s14 { font-size: 14px !important; }
+
+.max-w40 { max-width: 40%;}
+
+
 .fixed-bottom { z-index: 1; }
+
+.text-muted, .nav-link { color: #a0a0a0 !important; }
 
 p { 
   font-size: 14px; 
@@ -61,8 +71,18 @@ p {
   margin-bottom: 10px; 
   font-weight: 100; 
 }
+/*
+  Footer
+*/
+.social-link {
+  font-size: 45px;
+  color: #E91E63;  
+  transition: all .3s;
+}
 
-.max-w40 { max-width: 40%;}
+.social-link:hover {
+  color: rgb(155, 25, 68);  
+}
 
 
 @media screen and (max-width: 600px) {

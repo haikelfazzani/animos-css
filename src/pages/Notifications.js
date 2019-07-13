@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../css/snackbar.css';
-import TextArea from '../components/TextArea';
+import CodeBox from '../components/CodeBox';
 import codeNotifications from '../data/notifications';
 
 export default function Notifications() {
@@ -58,7 +58,7 @@ export default function Notifications() {
 
       <div className="w-75 mx-auto">
           
-        <TextArea
+        <CodeBox
           code={codeNotifications.find((c, idx) => c.name === optionVal).clx}
           handleChange={handleChange}
           isHide={!showCode}

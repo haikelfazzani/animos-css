@@ -80,7 +80,7 @@ function Animations() {
           <button className="btn btn-dark btn-black"
             onClick={(e) => copyToClipboard(e, textAreaClass, setIsClassCopied)}
             hidden={!showCode}>
-            {isClassCopied}
+            <i class="far fa-copy"></i> {isClassCopied}
           </button>
 
           <textarea
@@ -96,7 +96,7 @@ function Animations() {
           <button className="btn btn-dark btn-black"
             onClick={(e) => copyToClipboard(e, textAreaKeyFrame, setIsKeyFrameCopied)}
             hidden={!showCode}>
-            {isKeyFrameCopied}
+            <i class="far fa-copy"></i> {isKeyFrameCopied}
           </button>
 
           <textarea

@@ -1,5 +1,3 @@
-.font-s14 { font-size: 14px; }
-
 .img-logo {
   max-width: 30px;
 }
@@ -32,7 +30,7 @@
   position: absolute;
   top:30px;
   right: 30px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;  
   z-index: 999;
@@ -42,14 +40,4 @@
   color: #ffffff !important;
   background-color: #E91E63 !important;
   border-color: #c51954 !important;
-}
-
-.social-link {
-  font-size: 45px;
-  color: #E91E63;  
-  transition: all .3s;
-}
-
-.social-link:hover {
-  color: rgb(155, 25, 68);  
 }
