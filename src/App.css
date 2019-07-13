@@ -41,3 +41,16 @@
   background-color: #E91E63 !important;
   border-color: #c51954 !important;
 }
+
+
+.cube {
+  margin: auto;
+  background-color: #E91E63;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

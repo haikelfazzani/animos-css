@@ -18,23 +18,30 @@ class Animations extends React.Component {
       isMounted: false,
       txtAnimation: "bounce",
       titleClass: "jumbotron-heading ", playAnim: true,
-      isCodeBoxHide: true, codeClx: "", codeFrame: ""
+      isCodeBoxHide: true, codeClx: "", codeFrame: "",
+      hideElmnt: false, switchElmnt: false
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.changeClass = this.changeClass.bind(this);
     this.getCode = this.getCode.bind(this);
+    this.handleRadios = this.handleRadios.bind(this);
   }
 
   handleChange(e) {
-    this.setState({ playAnim: true, txtAnimation: e.target.value });
+    let val = e.target.value;
+    this.setState({ playAnim: true, txtAnimation: val });
+  }
+
+  handleRadios(e) {
+    this.setState({ switchElmnt: !this.state.switchElmnt })
   }
 
   changeClass() {
     this.setState({
       playAnim: !this.state.playAnim,
       titleClass: this.state.playAnim ?
-        "jumbotron-heading " + this.state.txtAnimation : "jumbotron-heading "      
+        "jumbotron-heading " + this.state.txtAnimation : "jumbotron-heading "
     });
   }
 
@@ -49,13 +56,17 @@ class Animations extends React.Component {
   render() {
     return (
       <>
-        <h1 className="jumbotron-heading" className={this.state.titleClass}>
+        <h1 className={this.state.titleClass}
+          style={{ display: !this.state.switchElmnt ? "block" : "none" }}>
           Animos<span className="color-rose">.css</span>
         </h1>
 
-        <p className="lead text-muted">
-          it's free css animations, you can use it whenever you need
-        </p>
+        <h1 className={this.state.titleClass}
+          style={{ display: this.state.switchElmnt ? "block" : "none" }}>
+          <div className="cube display-3">A</div>
+        </h1>
+
+        <p className="lead text-muted">free css animations, you can use it whenever you need</p>
 
         <div className="form-group w-25 mx-auto">
           <select className="form-control" name="animations"
@@ -63,6 +74,13 @@ class Animations extends React.Component {
             onChange={this.handleChange}>
             {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
           </select>
+        </div>
+
+
+        <div className="custom-control custom-switch mb-2">
+          <input type="checkbox" className="custom-control-input" id="customSwitch1"
+            onClick={this.handleRadios} value={this.state.switchElmnt} />
+          <label className="custom-control-label" htmlFor="customSwitch1">text or cube</label>
         </div>
 
         <p>
