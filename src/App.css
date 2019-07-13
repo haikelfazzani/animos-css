@@ -47,4 +47,9 @@
 .social-link {
   font-size: 45px;
   color: #E91E63;  
+  transition: all .3s;
+}
+
+.social-link:hover {
+  color: rgb(155, 25, 68);  
 }

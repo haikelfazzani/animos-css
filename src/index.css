@@ -30,7 +30,7 @@ body {
 
 .container { position: relative; }
 
-.jumbotron { background-color: initial !important; }
+.jumbotron { background-color: inherit !important; }
 
 h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bottom: 20px; }
 
@@ -53,7 +53,8 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bott
 
 .fixed-bottom { z-index: 1; }
 
-p { font-size: 14px; 
+p { 
+  font-size: 14px; 
   max-width: 500px; 
   text-align: center;
   margin: auto;
@@ -72,4 +73,6 @@ p { font-size: 14px;
   }
 
   p { font-size: 14px !important; }
+
+  textarea,select, .w-75, .w-50,.w-25 { width: 100% !important;}
 }

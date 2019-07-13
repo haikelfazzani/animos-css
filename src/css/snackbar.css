@@ -7,8 +7,8 @@
   visibility: hidden; 
   min-width: 250px;
  
-  background-color: #292929c2;
-  color: #fff; 
+  background-color: #292929 !important;
+  color: #fff !important; 
   text-align: center;
   font-size: 16px;
   border-radius: 5px; 
@@ -51,8 +51,8 @@
 .toast {
   visibility: hidden; 
   min-width: 200px;
-  background-color: #292929c2;
-  color: #fff;
+  background-color: #292929 !important;
+  color: #fff !important;
   padding: 15px;
   text-align: left;
   position: fixed;
@@ -60,7 +60,7 @@
   right: 30px;
 }
 
-.toast p { font-size: 14px; }
+.toast p { text-align: left; font-size: 14px; }
 
 .toast.show {
   visibility: visible; 
