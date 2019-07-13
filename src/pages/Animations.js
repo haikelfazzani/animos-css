@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { animOptions } from '../data/options';
 
 import '../App.css';
@@ -7,110 +7,84 @@ import '../css/Animos.css';
 import codeAnimation from '../data/animation';
 
 import Option from '../components/Option';
+import CodeBox from '../components/CodeBox';
 
-import copyToClipboard from "../service/copy";
+class Animations extends React.Component {
 
-function Animations() {
+  constructor(props) {
+    super(props);
 
-  let [optionVal, setOptionVal] = useState("bounce");
-  let [titleClass, settitleClass] = useState("jumbotron-heading");
-  let [isClicked, setisClicked] = useState(false);
+    this.state = {
+      isMounted: false,
+      txtAnimation: "bounce",
+      titleClass: "jumbotron-heading ",
+      isCodeBoxHide: true, codeClx: "", codeFrame: ""
+    };
 
-  const [showCode, setShowCode] = useState(false);
-  const [code, setCode] = useState(codeAnimation[0].clx);
-  const [keyFrame, setKeyFrame] = useState(codeAnimation[0].keyframe);
-
-
-  const [isClassCopied, setIsClassCopied] = useState('copy');
-  const [isKeyFrameCopied, setIsKeyFrameCopied] = useState('copy');
-  const textAreaClass = React.useRef(null);
-  const textAreaKeyFrame = React.useRef(null);
-
-  useEffect(() => {
-
-    setisClicked(false);
-    setShowCode(false);
-    setCode(codeAnimation.find(c => c.name === optionVal.trim()).clx);
-    setKeyFrame(codeAnimation.find(c => c.name === optionVal.trim()).keyframe);
-
-    if (showCode) {
-      setIsClassCopied("copy");
-      setIsKeyFrameCopied("copy");
-    }
-
-  }, [optionVal]);
-
-  function handleChange(e) {
+    this.handleChange = this.handleChange.bind(this);
+    this.changeClass = this.changeClass.bind(this);
+    this.getCode = this.getCode.bind(this);
   }
 
-  return (
-    <>
-      <h1 className="jumbotron-heading" className={isClicked ? titleClass : "jumbotron-heading"}>
-        Animos<span className="color-rose">.css</span>
-      </h1>
+  handleChange(e) {
+    this.setState({ txtAnimation: e.target.value });
+  }
 
-      <p className="lead text-muted">
-        it's free css animations, you can use it whenever you need
-          </p>
+  changeClass() {
+    this.setState({ titleClass: "jumbotron-heading " + this.state.txtAnimation })
+  }
 
+  getCode() {
+    let c = codeAnimation.find((a, i) => a.name === this.state.txtAnimation);
+    this.setState({
+      codeClx: c.clx, codeFrame: c.keyframe, isCodeBoxHide: !this.state.isCodeBoxHide
+    });
+  }
 
-      <div className="form-group w-25 mx-auto">
-        <select className="form-control" onChange={(e) => setOptionVal(e.target.value)}>
-          {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
-        </select>
-      </div>
+  render() {
+    return (
+      <>
+        <h1 className="jumbotron-heading" className={this.state.titleClass}>
+          Animos<span className="color-rose">.css</span>
+        </h1>
 
+        <p className="lead text-muted">
+          it's free css animations, you can use it whenever you need
+        </p>
 
-      <p>
-        <button className="btn btn-secondary mb-3"
-          onClick={() => setShowCode(!showCode)}><i className="fas fa-code"></i>
-        </button>
-
-        <button className="btn btn-rose mb-3 ml-3"
-          onClick={() => {
-            setisClicked(!isClicked);
-            settitleClass("cover-heading " + optionVal)
-          }} ><i className="fas fa-paw"></i>
-        </button>
-      </p>
-
-      <div className="flex-column w-100 mt-20 mb-120">
-
-        <div className="code-container w-75 mx-auto">
-          <button className="btn btn-dark btn-black"
-            onClick={(e) => copyToClipboard(e, textAreaClass, setIsClassCopied)}
-            hidden={!showCode}>
-            <i class="far fa-copy"></i> {isClassCopied}
-          </button>
-
-          <textarea
-            className="code-box flipInX"
-            value={showCode ? code : "-"}
-            onChange={handleChange}
-            hidden={!showCode}
-            ref={textAreaClass}
-          />
+        <div className="form-group w-25 mx-auto">
+          <select className="form-control" name="animations"
+            value={this.state.txtAnimation}
+            onChange={this.handleChange}>
+            {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
+          </select>
         </div>
 
-        <div className="code-container w-75 mx-auto">
-          <button className="btn btn-dark btn-black"
-            onClick={(e) => copyToClipboard(e, textAreaKeyFrame, setIsKeyFrameCopied)}
-            hidden={!showCode}>
-            <i class="far fa-copy"></i> {isKeyFrameCopied}
+        <p>
+          <button className="btn btn-secondary mb-3"
+            onClick={this.getCode}>
+            <i className="fas fa-code"></i>
           </button>
 
-          <textarea
-            className="code-box flipInX"
-            value={showCode ? keyFrame : "-"}
-            onChange={handleChange}
-            hidden={!showCode}
-            ref={textAreaKeyFrame}
-          />
+          <button className="btn btn-rose mb-3 ml-3"
+            onClick={this.changeClass}>
+            <i className="fas fa-paw"></i>
+          </button>
+        </p>
+
+        <div className="w-75 mx-auto">
+          <CodeBox
+            code={this.state.codeClx}
+            handleChange={this.handleChange}
+            isHide={this.state.isCodeBoxHide} />
+
+          <CodeBox
+            code={this.state.codeFrame}
+            handleChange={this.handleChange}
+            isHide={this.state.isCodeBoxHide} />
         </div>
-
-      </div>
-
-    </>);
+      </>)
+  }
 }
 
 export default Animations;
