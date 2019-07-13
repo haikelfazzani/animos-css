@@ -30,8 +30,8 @@
 .bounce { 
    -webkit-animation-name: bounce; 
    animation-name: bounce; 
-   -webkit-animation-duration: 1s;
-   animation-duration: 1s;
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
 }
 
 /* Bounce Out Up */
@@ -167,8 +167,8 @@
 .pulse {
    -webkit-animation-name: pulse;
    animation-name: pulse;
-   -webkit-animation-duration: 1s;
-   animation-duration: 1s;
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
 }
 
 /***********************************
@@ -209,8 +209,8 @@
 .shake { 
    -webkit-animation-name: shake; 
    animation-name: shake; 
-   -webkit-animation-duration: 1s;
-   animation-duration: 1s;
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
 }
 
 

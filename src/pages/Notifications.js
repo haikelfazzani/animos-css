@@ -17,14 +17,15 @@ export default function Notifications() {
     setIsClicked(!isClicked);
 
     switch (optionVal) {
-      case "snackbar":
-        setSnackClass("snackbar show")
-        setTimeout(() => { setSnackClass("snackbar") }, 3000);
-        break;
 
       case "toast":
         setToastClass("toast show")
         setTimeout(() => { setToastClass("toast") }, 3000);
+        break;
+
+      default:
+        setSnackClass("snackbar show")
+        setTimeout(() => { setSnackClass("snackbar") }, 3000);
         break;
     }
 
@@ -40,16 +41,16 @@ export default function Notifications() {
 
 
       <div className="form-group w-25 mx-auto">
-        <select className="form-control"  onChange={(e) => setOptionVal(e.target.value)}>
+        <select className="form-control" onChange={(e) => setOptionVal(e.target.value)}>
           <option value="snackbar">snackbar</option>
           <option value="toast">toast</option>
         </select>
       </div>
-      
+
 
       <button className="btn btn-secondary mb-3" onClick={() => setShowCode(!showCode)}>
         <i className="fas fa-laptop-code"></i>
-      </button> 
+      </button>
 
       <button className="btn btn-rose mb-3 ml-3" onClick={myFunction}>
         <i className="fas fa-bell"></i>
@@ -57,7 +58,7 @@ export default function Notifications() {
 
 
       <div className="w-75 mx-auto">
-          
+
         <CodeBox
           code={codeNotifications.find((c, idx) => c.name === optionVal).clx}
           handleChange={handleChange}
@@ -66,11 +67,15 @@ export default function Notifications() {
       </div>
 
 
-      <div className={snackClass}>Lorem ipsum dolor sit amet....</div>
+      <div className="position-relative w-100">
+        <div className={snackClass}>Lorem ipsum dolor sit amet....</div>
+      </div>
+
       <div className={toastClass}>
         <h5 className="m-0 p-0">Toast title</h5>
         <p className="m-0 p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
+
     </>
   )
 }

@@ -25,8 +25,8 @@ const codeAnimation = [
     .bounce { 
       -webkit-animation-name: bounce; 
       animation-name: bounce; 
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
     }`,
     keyframe: `
     @-webkit-keyframes bounce { 
@@ -89,8 +89,8 @@ const codeAnimation = [
       -webkit-animation-name: flipInX;
       backface-visibility: visible !important;
       animation-name: flipInX;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
     }`,
     keyframe: `
     @-webkit-keyframes flipInX {
@@ -263,8 +263,8 @@ const codeAnimation = [
     .pulse {
       -webkit-animation-name: pulse;
       animation-name: pulse;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
     }`,
     keyframe: `
     @-webkit-keyframes pulse {
@@ -286,8 +286,8 @@ const codeAnimation = [
     .shake { 
       -webkit-animation-name: shake; 
       animation-name: shake; 
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
     }`,
     keyframe: `
     @-webkit-keyframes shake {

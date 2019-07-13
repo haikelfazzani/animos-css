@@ -17,7 +17,7 @@ class Animations extends React.Component {
     this.state = {
       isMounted: false,
       txtAnimation: "bounce",
-      titleClass: "jumbotron-heading ",
+      titleClass: "jumbotron-heading ", playAnim: true,
       isCodeBoxHide: true, codeClx: "", codeFrame: ""
     };
 
@@ -27,17 +27,22 @@ class Animations extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({ txtAnimation: e.target.value });
+    this.setState({ playAnim: true, txtAnimation: e.target.value });
   }
 
   changeClass() {
-    this.setState({ titleClass: "jumbotron-heading " + this.state.txtAnimation })
+    this.setState({
+      playAnim: !this.state.playAnim,
+      titleClass: this.state.playAnim ?
+        "jumbotron-heading " + this.state.txtAnimation : "jumbotron-heading "      
+    });
   }
 
   getCode() {
     let c = codeAnimation.find((a, i) => a.name === this.state.txtAnimation);
     this.setState({
-      codeClx: c.clx, codeFrame: c.keyframe, isCodeBoxHide: !this.state.isCodeBoxHide
+      codeClx: c.clx, codeFrame: c.keyframe,
+      isCodeBoxHide: !this.state.isCodeBoxHide
     });
   }
 

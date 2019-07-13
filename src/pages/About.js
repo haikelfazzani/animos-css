@@ -8,26 +8,24 @@ export default function About() {
       </h5>
 
       <p className="lead text-muted">
-        ANY SUGGESTIONS/FEEDBACK IT WOULD BE AWESOME IF YOU GAVE ME
-      A SHOUT AT HAIKEL.FAZZANI@GMAIL.COM OR...
-          </p>
-
-      <p>
-        <div className="d-flex justify-content-center align-items-center">
-          <a className="social-link" href="https://github.com/haikelfazzani">
-            <i className="fab fa-facebook-square"></i>
-          </a>
-
-          <a className="social-link ml-3" href="https://github.com/haikelfazzani">
-            <i className="fab fa-twitter-square"></i>
-          </a>
-
-          <a className="social-link ml-3" href="https://github.com/haikelfazzani">
-            <i className="fab fa-github-square"></i>
-          </a>
-
-        </div>
+        ANY SUGGESTIONS/FEEDBACK IT WOULD BE AWESOME IF YOU GAVE ME A SHOUT AT HAIKEL.FAZZANI@GMAIL.COM OR...
       </p>
+
+      <div className="d-flex justify-content-center align-items-center">
+
+        <a className="social-link" href="https://github.com/haikelfazzani">
+          <i className="fab fa-facebook-square"></i>
+        </a>
+
+        <a className="social-link ml-3" href="https://github.com/haikelfazzani">
+          <i className="fab fa-twitter-square"></i>
+        </a>
+
+        <a className="social-link ml-3" href="https://github.com/haikelfazzani">
+          <i className="fab fa-github-square"></i>
+        </a>
+
+      </div>
 
     </>)
 }

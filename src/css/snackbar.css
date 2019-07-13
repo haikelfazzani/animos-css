@@ -15,8 +15,9 @@
   padding: 16px;
   position: fixed; 
   z-index: 999; 
-  left: 41%; 
+  left: 50%; 
   bottom: 30px; 
+  margin-left: -125px;
 }
 
 .snackbar.show {
