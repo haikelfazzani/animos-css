@@ -66,34 +66,32 @@ class Animations extends React.Component {
           <div className="cube display-3">A</div>
         </h1>
 
+        <div className="custom-control custom-switch mb-2">
+          <input type="checkbox" className="custom-control-input" id="customSwitch1"
+            onClick={this.handleRadios} value={this.state.switchElmnt} />
+          <label className="custom-control-label" htmlFor="customSwitch1"></label>
+        </div>
+
         <p className="lead text-muted">free css animations, you can use it whenever you need</p>
 
-        <div className="form-group w-25 mx-auto">
+        <div className="form-group d-inline-flex w-25 mx-auto">
           <select className="form-control" name="animations"
             value={this.state.txtAnimation}
             onChange={this.handleChange}>
             {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
           </select>
+
+          <div class="btn-group ml-3" role="group" aria-label="Basic example">
+            <button className="btn btn-secondary" onClick={this.getCode}>
+              <i className="fas fa-code"></i>
+            </button>
+
+            <button className="btn btn-rose" onClick={this.changeClass}>
+              <i className="fas fa-paw"></i>
+            </button>
+          </div>
+
         </div>
-
-
-        <div className="custom-control custom-switch mb-2">
-          <input type="checkbox" className="custom-control-input" id="customSwitch1"
-            onClick={this.handleRadios} value={this.state.switchElmnt} />
-          <label className="custom-control-label" htmlFor="customSwitch1">text or cube</label>
-        </div>
-
-        <p>
-          <button className="btn btn-secondary mb-3"
-            onClick={this.getCode}>
-            <i className="fas fa-code"></i>
-          </button>
-
-          <button className="btn btn-rose mb-3 ml-3"
-            onClick={this.changeClass}>
-            <i className="fas fa-paw"></i>
-          </button>
-        </p>
 
         <div className="w-75 mx-auto">
           <CodeBox

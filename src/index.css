@@ -32,7 +32,7 @@ body {
 
 .jumbotron { background-color: inherit !important; }
 
-h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bottom: 20px; }
+h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; margin-bottom: 10px; }
 
 /*
   Nav
