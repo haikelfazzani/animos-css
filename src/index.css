@@ -99,5 +99,5 @@ p {
 
   p { font-size: 14px !important; }
 
-  textarea,select, .w-75, .w-50,.w-25 { width: 100% !important;}
+  textarea,select, .w-75, .w-50,.w-25, .w-30 { width: 100% !important;}
 }
