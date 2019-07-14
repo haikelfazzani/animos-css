@@ -30,7 +30,14 @@ class Animations extends React.Component {
 
   handleChange(e) {
     let val = e.target.value;
-    this.setState({ playAnim: true, txtAnimation: val });
+    let c = codeAnimation.find((a, i) => a.name === val);
+
+    this.setState({
+      playAnim: true,
+      txtAnimation: val,
+      codeClx: c.clx, codeFrame: c.keyframe
+    });
+
   }
 
   handleRadios(e) {
@@ -74,7 +81,7 @@ class Animations extends React.Component {
 
         <p className="lead text-muted">free css animations, you can use it whenever you need</p>
 
-        <div className="form-group d-inline-flex w-25 mx-auto">
+        <div className="form-group d-inline-flex w-30 mx-auto">
           <select className="form-control" name="animations"
             value={this.state.txtAnimation}
             onChange={this.handleChange}>
@@ -83,7 +90,7 @@ class Animations extends React.Component {
 
           <div class="btn-group ml-3" role="group" aria-label="Basic example">
             <button className="btn btn-secondary" onClick={this.getCode}>
-              <i className="fas fa-code"></i>
+              <i className="fas fa-laptop-code"></i>
             </button>
 
             <button className="btn btn-rose" onClick={this.changeClass}>
