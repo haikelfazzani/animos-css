@@ -52,6 +52,10 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; }
   line-height: 2;  
 }
 
+.collapse, .navbar-collapse {
+  transition: all .4s ease;
+}
+
 /* Util */
 .font-s12 { font-size: 12px !important; }
 .font-s14 { font-size: 14px !important; }
@@ -64,6 +68,7 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; }
 .text-muted, .nav-link { color: #a0a0a0 !important; }
 
 p { 
+  font-family: Montserrat;
   font-size: 14px; 
   max-width: 500px; 
   text-align: center;

@@ -5,13 +5,13 @@ import Logo from '../images/logo-rose.png';
 export default function Nav() {
 
   const [changeThme, setChangeThme] = useState(false);
-  const [theme, setTheme] = useState({ back: "#282c34", color: "#fff" });
+  const [theme, setTheme] = useState({ back: "#3a3a3a", color: "#fff" });
 
   const [showDrop, setShowDrop] = useState(false)
 
   React.useEffect(() => {
     changeThme ? setTheme({ back: "#fff", color: "#000" }) :
-      setTheme({ back: "#282c34", color: "#fff" });
+      setTheme({ back: "#3a3a3a", color: "#fff" });
 
     document.body.style.backgroundColor = theme.back;
     document.body.style.color = theme.color;

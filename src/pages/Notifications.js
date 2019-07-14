@@ -52,7 +52,7 @@ export default function Notifications() {
         <i className="fas fa-laptop-code"></i>
       </button>
 
-      <button className="btn btn-rose mb-3 ml-3" onClick={myFunction}>
+      <button className="btn btn-danger btn-rose mb-3 ml-3" onClick={myFunction}>
         <i className="fas fa-bell"></i>
       </button>
 

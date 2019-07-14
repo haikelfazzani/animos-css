@@ -102,8 +102,8 @@
    -webkit-animation-name: flipInY;
    backface-visibility: visible !important;
    animation-name: flipInY;
-   -webkit-animation-duration: 2s;
-   animation-duration: 2s;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
 }
 
 /***********************************
@@ -171,6 +171,29 @@
    animation-duration: 2s;
 }
 
+/* pulseOut */
+@-webkit-keyframes pulseUpOut {
+   0% { -webkit-transform: scale(1); }
+   25% { -webkit-transform: translateY(-10px) scale3d(1.1, 0.7, 0); }
+   50% { -webkit-transform: translateY(0) scale(0.2); }
+   75% { -webkit-transform: translateY(-30px) scale3d(0.9, 0.5, 0); }
+   100% { -webkit-transform: translateY(0) scale(1); }
+}
+
+@keyframes pulseUpOut {
+   0% { transform: scale(1); }
+   25% { transform: translateY(-10px) scale3d(1.1, 0.7, 0); }
+   50% { transform: translateY(0) scale(0.2); }
+   75% { transform: translateY(-30px) scale3d(0.9, 0.5, 0); }
+   100% { transform: translateY(0) scale(1); }
+}
+
+.pulseUpOut {
+   -webkit-animation-name: pulseUpOut;
+   animation-name: pulseUpOut;
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
+}
 /***********************************
             Heart Beat
 ************************************/

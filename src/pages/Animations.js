@@ -70,7 +70,10 @@ class Animations extends React.Component {
 
         <h1 className={this.state.titleClass}
           style={{ display: this.state.switchElmnt ? "block" : "none" }}>
-          <div className="cube display-3">A</div>
+          <div className="cube display-3 w-50">
+          <p className="text-left text-light m-0 text-lowercase">
+          Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis, 
+          cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.</p></div>
         </h1>
 
         <div className="custom-control custom-switch mb-2">
@@ -79,7 +82,9 @@ class Animations extends React.Component {
           <label className="custom-control-label" htmlFor="customSwitch1"></label>
         </div>
 
-        <p className="lead text-muted">free css animations, you can use it whenever you need</p>
+        <p className="lead text-muted w-50 pulseOut">
+          Collection of free css animations, you can use it whenever you need
+        </p>
 
         <div className="form-group d-inline-flex w-30 mx-auto">
           <select className="form-control" name="animations"
@@ -88,12 +93,12 @@ class Animations extends React.Component {
             {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
           </select>
 
-          <div class="btn-group ml-3" role="group" aria-label="Basic example">
+          <div className="btn-group ml-3" role="group" aria-label="Basic example">
             <button className="btn btn-secondary" onClick={this.getCode}>
               <i className="fas fa-laptop-code"></i>
             </button>
 
-            <button className="btn btn-rose" onClick={this.changeClass}>
+            <button className="btn btn-danger btn-rose" onClick={this.changeClass}>
               <i className="fas fa-paw"></i>
             </button>
           </div>

@@ -16,6 +16,8 @@ const animOptions = [
   { val: "rotate-y360", txt: "rotate-y360" },
 
   { val: "pulse", txt: "pulse" },
+  { val: "pulseUpOut", txt: "pulseUpOut" },
+
   { val: "shake", txt: "shake" },
   { val: "shake-right", txt: "shake-right" },
   { val: "spin", txt: "spin" },
