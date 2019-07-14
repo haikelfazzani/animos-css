@@ -82,7 +82,7 @@ class Animations extends React.Component {
           <label className="custom-control-label" htmlFor="customSwitch1"></label>
         </div>
 
-        <p className="lead text-muted w-50 pulseOut">
+        <p className="lead text-muted w-50">
           Collection of free css animations, you can use it whenever you need
         </p>
 

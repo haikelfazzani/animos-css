@@ -2,8 +2,13 @@
             Spin
 ************************************/
 .spin {
-   -webkit-animation: spin infinite 20s linear;
-   animation: spin infinite 20s linear;
+   -webkit-animation: spin infinite 5s linear;
+   animation: spin infinite 5s linear;
+}
+
+@-webkit-keyframes spin { 
+   from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
 }
 
 @keyframes spin {
