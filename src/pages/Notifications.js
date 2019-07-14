@@ -40,7 +40,7 @@ export default function Notifications() {
       </p>
 
 
-      <div className="form-group w-25 mx-auto">
+      <div className="form-group w-30 mx-auto">
         <select className="form-control" onChange={(e) => setOptionVal(e.target.value)}>
           <option value="snackbar">snackbar</option>
           <option value="toast">toast</option>
@@ -48,13 +48,15 @@ export default function Notifications() {
       </div>
 
 
-      <button className="btn btn-secondary mb-3" onClick={() => setShowCode(!showCode)}>
-        <i className="fas fa-laptop-code"></i>
-      </button>
+      <div className="btn-group btn-block w-30 mx-auto" role="group" aria-label="Basic example">
+        <button className="btn btn-secondary" onClick={() => setShowCode(!showCode)}>
+          <i className="fas fa-laptop-code"></i>
+        </button>
 
-      <button className="btn btn-danger btn-rose mb-3 ml-3" onClick={myFunction}>
-        <i className="fas fa-bell"></i>
-      </button>
+        <button className="btn btn-danger btn-rose" onClick={myFunction}>
+          <i className="fas fa-bell"></i>
+        </button>
+      </div>
 
 
       <div className="w-75 mx-auto">
