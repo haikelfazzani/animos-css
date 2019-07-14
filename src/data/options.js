@@ -22,7 +22,8 @@ const animOptions = [
   { val: "shake-right", txt: "shake-right" },
   { val: "spin", txt: "spin" },
 
-  { val: "textExpand", txt: "textExpand" }
+  { val: "textExpand", txt: "textExpand" },
+  { val: "wiggle", txt: "wiggle" }
 ];
 
 export { animOptions };

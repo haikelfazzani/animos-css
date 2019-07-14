@@ -237,8 +237,8 @@
 .shake { 
    -webkit-animation-name: shake; 
    animation-name: shake; 
-   -webkit-animation-duration: 2s;
-   animation-duration: 2s;
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
 }
 
 
@@ -365,3 +365,54 @@
    100% { opacity: 1; }
 }
  
+
+/***********************************
+            Wiggle
+************************************/
+
+.wiggle{
+	animation-name: wiggle;
+	-webkit-animation-name: wiggle;	
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+	from { transform: rotate(-5deg); }
+	50% { transform: rotate(5deg); }
+	to { transform: rotate(-5deg);	 }						
+}
+
+@-webkit-keyframes wiggle {
+	from { -webkit-transform: rotate(-5deg);	 }
+	50% { -webkit-transform: rotate(5deg); }
+	to { -webkit-transform: rotate(-5deg);	 }				
+}
+
+
+/***********************************
+            Slide
+************************************/
+.slideLeft{
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;		
+
+}
+
+@keyframes slideLeft {
+	from { transform: translateX(150%); opacity: 0; }		
+	to { transform: translateX(0%); opacity: 1; }	
+}
+
+@-webkit-keyframes slideLeft {
+	from { -webkit-transform: translateX(150%); opacity: 0; }		
+	to { -webkit-transform: translateX(0%); opacity: 1; }
+}

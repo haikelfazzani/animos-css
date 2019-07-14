@@ -312,8 +312,8 @@ const codeAnimation = [
     .shake { 
       -webkit-animation-name: shake; 
       animation-name: shake; 
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
     }`,
     keyframe: `
     @-webkit-keyframes shake {
@@ -370,6 +370,30 @@ const codeAnimation = [
       0% { letter-spacing: -0.5em; opacity: 0; }
       50% { letter-spacing: 0; }
       100% { opacity: 1; }
+    }`
+  },
+  {
+    name: "wiggle",
+    clx: `
+    .wiggle{
+      animation-name: wiggle;
+      -webkit-animation-name: wiggle;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+    }`,
+    keyframe: `
+    @keyframes wiggle {
+      from { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+      to { transform: rotate(-5deg);	 }						
+    }
+    
+    @-webkit-keyframes wiggle {
+      from { -webkit-transform: rotate(-5deg);	 }
+      50% { -webkit-transform: rotate(5deg); }
+      to { -webkit-transform: rotate(-5deg);	 }				
     }`
   },
 ];
