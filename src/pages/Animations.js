@@ -71,8 +71,8 @@ class Animations extends React.Component {
         <h1 className={this.state.titleClass}
           style={{ display: this.state.switchElmnt ? "block" : "none" }}>
           <div className="cube display-3 w-50">
-          <p className="text-left text-light m-0 text-lowercase">
-          Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis, 
+            <p className="text-left text-light m-0 text-lowercase">
+              Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis,
           cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.</p></div>
         </h1>
 
@@ -82,28 +82,26 @@ class Animations extends React.Component {
           <label className="custom-control-label" htmlFor="customSwitch1"></label>
         </div>
 
-        <p className="lead text-muted w-50">
+        <p className="text-muted w-50">
           Collection of free css animations, you can use it whenever you need
         </p>
 
-        <div className="form-group d-inline-flex w-30 mx-auto">
-          <select className="form-control" name="animations"
-            value={this.state.txtAnimation}
-            onChange={this.handleChange}>
-            {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
-          </select>
+        <select className="form-control w-30 mx-auto mb-3" name="animations"
+          value={this.state.txtAnimation}
+          onChange={this.handleChange}>
+          {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
+        </select>
 
-          <div className="btn-group ml-3" role="group" aria-label="Basic example">
-            <button className="btn btn-secondary" onClick={this.getCode}>
-              <i className="fas fa-laptop-code"></i>
-            </button>
+        <div className="btn-group btn-block w-30 mx-auto" role="group" aria-label="Basic example">
+          <button className="btn btn-secondary" onClick={this.getCode}>
+            <i className="fas fa-laptop-code"></i>
+          </button>
 
-            <button className="btn btn-danger btn-rose" onClick={this.changeClass}>
-              <i className="fas fa-paw"></i>
-            </button>
-          </div>
-
+          <button className="btn btn-danger btn-rose" onClick={this.changeClass}>
+            <i className="fas fa-paw"></i>
+          </button>
         </div>
+
 
         <div className="w-75 mx-auto">
           <CodeBox
