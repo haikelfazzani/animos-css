@@ -72,8 +72,12 @@ class Animations extends React.Component {
           style={{ display: this.state.switchElmnt ? "block" : "none" }}>
           <div className="cube display-3 w-50">
             <p className="text-left text-light m-0 text-lowercase">
-              Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis,
-          cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.</p></div>
+              Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis 
+              amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario 
+              filia Scipionis,
+              cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.
+            </p>
+          </div>
         </h1>
 
         <div className="custom-control custom-switch mb-2">
@@ -82,7 +86,7 @@ class Animations extends React.Component {
           <label className="custom-control-label" htmlFor="customSwitch1"></label>
         </div>
 
-        <p className="text-muted w-50">
+        <p className="text-muted w-30">
           Collection of free css animations, you can use it whenever you need
         </p>
 
