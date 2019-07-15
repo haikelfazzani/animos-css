@@ -3,6 +3,24 @@
 }
 
 .color-rose { color: #E91E63 !important; }
+
+.anim-container {
+  max-width: 150px;
+}
+
+.cube {
+  width: 150px;
+  height: 150px;  
+  margin: auto;
+  background-color: #E91E63 !important;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px !important;
+  border-bottom: 4px solid #00BCD4;
+  border-top: 4px solid #8BC34A;
+  border-left: 4px solid #00BCD4;
+  border-right: 4px solid #8BC34A;
+}
+
 /* *********** */
 /* code box */
 /* *********** */
@@ -42,10 +60,3 @@
   border-color: #c51954 !important;
 }
 
-
-.cube {
-  margin: auto;
-  background-color: #252525;
-  padding: 15px;
-  border-radius: 5px;
-}

@@ -1,4 +1,5 @@
 import React from 'react';
+import OuterLink from '../components/OuterLink';
 
 export default function About() {
   return (
@@ -11,22 +12,25 @@ export default function About() {
 
       <p>
         ANY SUGGESTIONS/FEEDBACK IT WOULD BE AWESOME IF YOU GAVE ME A SHOUT
-          AT HAIKEL.FAZZANI@GMAIL.COM OR...
+        AT HAIKEL.FAZZANI@GMAIL.COM OR...
       </p>
 
       <div className="d-flex justify-content-center align-items-center">
 
-        <a className="social-link" href="https://github.com/haikelfazzani/animos-css">
-          <i className="fab fa-github-square"></i>
-        </a>
+        <OuterLink clx="social-link"
+          href="https://github.com/haikelfazzani/animos-css"
+          iconClass="fab fa-github-square"
+        />
 
-        <a className="social-link ml-3" href="https://github.com/haikelfazzani">
-          <i className="fab fa-facebook-square"></i>
-        </a>
+        <OuterLink clx="social-link ml-3"
+          href="https://github.com/haikelfazzani/animos-css"
+          iconClass="fab fa-facebook-square"
+        />
 
-        <a className="social-link ml-3" href="https://github.com/haikelfazzani">
-          <i className="fab fa-twitter-square"></i>
-        </a>
+        <OuterLink clx="social-link ml-3"
+          href="https://github.com/haikelfazzani/animos-css"
+          iconClass="fab fa-twitter-square"
+        />
 
       </div>
 

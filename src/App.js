@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import About from './pages/About';
-import More from './pages/More';
 import Animations from './pages/Animations';
 import Notifications from './pages/Notifications';
 import Footer from './partials/Footer';
 import Nav from './partials/Nav';
+import Buttons from './pages/Buttons';
 
 function App() {
 
@@ -21,8 +21,8 @@ function App() {
           <div className="container">
             <Route exact path="/" component={Animations} />
             <Route exact path="/notifications" component={Notifications} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/more" component={More} />
+            <Route exact path="/buttons" component={Buttons} />
+            <Route exact path="/about" component={About} />            
             <Route render={() => <Redirect to="/" />} />
           </div>
         </section>

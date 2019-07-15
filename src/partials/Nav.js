@@ -48,12 +48,12 @@ export default function Nav() {
           </li>
 
           <li className="nav-item">
-            <Link to="/about" className="nav-link">About</Link>
+            <Link to="/buttons" className="nav-link">butttons</Link>
           </li>
 
           <li className="nav-item">
-            <Link to="/more" className="nav-link">More</Link>
-          </li>
+            <Link to="/about" className="nav-link">About</Link>
+          </li>          
 
           <li className="nav-item">
             <Link to="#" className="nav-link"

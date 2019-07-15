@@ -6,8 +6,9 @@ import '../css/Animos.css';
 
 import codeAnimation from '../data/animation';
 
-import Option from '../components/Option';
 import CodeBox from '../components/CodeBox';
+import Select from '../components/Select';
+import ButtonIcon from '../components/ButtonIcon';
 
 class Animations extends React.Component {
 
@@ -17,7 +18,7 @@ class Animations extends React.Component {
     this.state = {
       isMounted: false,
       txtAnimation: "bounce",
-      titleClass: "jumbotron-heading ", playAnim: true,
+      titleClass: "", playAnim: true,
       isCodeBoxHide: true, codeClx: "", codeFrame: "",
       hideElmnt: false, switchElmnt: false
     };
@@ -47,8 +48,7 @@ class Animations extends React.Component {
   changeClass() {
     this.setState({
       playAnim: !this.state.playAnim,
-      titleClass: this.state.playAnim ?
-        "jumbotron-heading " + this.state.txtAnimation : "jumbotron-heading "
+      titleClass: this.state.playAnim ? this.state.txtAnimation : ""
     });
   }
 
@@ -63,22 +63,18 @@ class Animations extends React.Component {
   render() {
     return (
       <>
-        <h1 className={this.state.titleClass}
-          style={{ display: !this.state.switchElmnt ? "block" : "none" }}>
-          Animos<span className="color-rose">.css</span>
-        </h1>
+        <div className="anim-container mx-auto mb-3">
+          <h1 className={"jumbotron-heading " +this.state.titleClass}
+            style={{ display: this.state.switchElmnt ? "block" : "none" }}>
+            Animos<span className="color-rose">.css</span>
+          </h1>
 
-        <h1 className={this.state.titleClass}
-          style={{ display: this.state.switchElmnt ? "block" : "none" }}>
-          <div className="cube display-3 w-50">
-            <p className="text-left text-light m-0 text-lowercase">
-              Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis 
-              amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario 
-              filia Scipionis,
-              cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.
-            </p>
+          <div className={"cube " + this.state.titleClass}
+            style={{ display: !this.state.switchElmnt ? "block" : "none" }}>
+
           </div>
-        </h1>
+
+        </div>
 
         <div className="custom-control custom-switch mb-2">
           <input type="checkbox" className="custom-control-input" id="customSwitch1"
@@ -90,20 +86,25 @@ class Animations extends React.Component {
           Collection of free css animations, you can use it whenever you need
         </p>
 
-        <select className="form-control w-30 mx-auto mb-3" name="animations"
-          value={this.state.txtAnimation}
-          onChange={this.handleChange}>
-          {animOptions.map((o, indx) => <Option key={indx} val={o.val} txt={o.txt} />)}
-        </select>
+
+        <Select clx="form-control w-30 mx-auto mb-3" name="animations"
+          val={this.state.txtAnimation}
+          handleChange={this.handleChange}
+          options={animOptions}
+        />
 
         <div className="btn-group btn-block w-30 mx-auto" role="group" aria-label="Basic example">
-          <button className="btn btn-secondary" onClick={this.getCode}>
-            <i className="fas fa-laptop-code"></i>
-          </button>
 
-          <button className="btn btn-danger btn-rose" onClick={this.changeClass}>
-            <i className="fas fa-paw"></i>
-          </button>
+          <ButtonIcon clx="btn btn-secondary"
+            handleClick={this.getCode}
+            iconClass="fas fa-laptop-code"
+          />
+
+          <ButtonIcon clx="btn btn-danger btn-rose"
+            handleClick={this.changeClass}
+            iconClass="fas fa-paw"
+          />
+
         </div>
 
 

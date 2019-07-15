@@ -20,8 +20,10 @@ const animOptions = [
   { val: "pulse", txt: "pulse" },
   { val: "pulseUpOut", txt: "pulseUpOut" },
 
-  { val: "shake", txt: "shake" },
+  { val: "shake", txt: "shake" },  
   { val: "shake-right", txt: "shake-right" },
+
+  { val: "slideRight", txt: "slideRight" },
   { val: "spin", txt: "spin" },
 
   { val: "textExpand", txt: "textExpand" },

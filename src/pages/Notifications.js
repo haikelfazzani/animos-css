@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../css/snackbar.css';
 import CodeBox from '../components/CodeBox';
 import codeNotifications from '../data/notifications';
+import ButtonIcon from '../components/ButtonIcon';
 
 export default function Notifications() {
 
@@ -39,7 +40,6 @@ export default function Notifications() {
         Push notifications to your visitors with a Toast or an Snackbar.
       </p>
 
-
       <div className="form-group w-30 mx-auto">
         <select className="form-control" onChange={(e) => setOptionVal(e.target.value)}>
           <option value="snackbar">snackbar</option>
@@ -47,17 +47,18 @@ export default function Notifications() {
         </select>
       </div>
 
-
       <div className="btn-group btn-block w-30 mx-auto" role="group" aria-label="Basic example">
-        <button className="btn btn-secondary" onClick={() => setShowCode(!showCode)}>
-          <i className="fas fa-laptop-code"></i>
-        </button>
 
-        <button className="btn btn-danger btn-rose" onClick={myFunction}>
-          <i className="fas fa-bell"></i>
-        </button>
+        <ButtonIcon clx="btn btn-secondary"
+          handleClick={() => setShowCode(!showCode)}
+          iconClass="fas fa-laptop-code"
+        />
+
+        <ButtonIcon clx="btn btn-danger btn-rose"
+          handleClick={myFunction}
+          iconClass="fas fa-bell"
+        />
       </div>
-
 
       <div className="w-75 mx-auto">
 
@@ -78,6 +79,5 @@ export default function Notifications() {
         <p className="m-0 p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
-    </>
-  )
+    </>)
 }

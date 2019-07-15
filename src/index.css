@@ -32,7 +32,7 @@ body {
 
 .jumbotron { background-color: inherit !important; }
 
-h1, .cover-heading { font-family: Pacifico-Regular; font-size: 65px; }
+h1, .cover-heading { font-family: Pacifico-Regular; font-size: 18px; }
 
 /*
   Nav
@@ -93,7 +93,7 @@ p {
 @media screen and (max-width: 600px) {
   h1, .cover-heading { 
     font-family: Pacifico-Regular; 
-    font-size: 30px; 
+    font-size: 18px; 
     margin-bottom: 20px; 
   }
 
