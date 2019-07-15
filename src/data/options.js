@@ -8,6 +8,8 @@ const animOptions = [
   { val: "flipInX", txt: "flipInX" },
   { val: "flipInY", txt: "flipInY" },
 
+  { val: "LeftStretch", txt: "LeftStretch" },
+
   { val: "heartBeat", txt: "heartBeat" },
 
   { val: "rotate-x180", txt: "rotate-x180" },

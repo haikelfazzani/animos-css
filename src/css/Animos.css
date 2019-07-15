@@ -158,22 +158,20 @@
             Pulse
 ************************************/
 @-webkit-keyframes pulse {
-   0% { -webkit-transform: scale(1); }
-   50% { -webkit-transform: scale(1.1); }
-   100% { -webkit-transform: scale(1); }
+   0% { -webkit-transform: scale(1); opacity: 1;}
+   50% { -webkit-transform: scale(1.1); opacity: 0.7;}
+   100% { -webkit-transform: scale(1); opacity: 1;}
 }
 
 @keyframes pulse {
-   0% { transform: scale(1); }
-   50% { transform: scale(1.1); }
-   100% { transform: scale(1); }
+   0% { transform: scale(1); opacity: 1;}
+   50% { transform: scale(1.1); opacity: 0.7; }
+   100% { transform: scale(1); opacity: 1; }
 }
 
 .pulse {
-   -webkit-animation-name: pulse;
-   animation-name: pulse;
-   -webkit-animation-duration: 2s;
-   animation-duration: 2s;
+   -webkit-animation: pulse infinite 2s linear;
+   animation: pulse infinite 2s linear;
 }
 
 /* pulseOut */
@@ -198,7 +196,7 @@
    animation-name: pulseUpOut;
    -webkit-animation-duration: 2s;
    animation-duration: 2s;
-}
+ }
 /***********************************
             Heart Beat
 ************************************/
@@ -369,7 +367,6 @@
 /***********************************
             Wiggle
 ************************************/
-
 .wiggle{
 	animation-name: wiggle;
 	-webkit-animation-name: wiggle;	
@@ -393,26 +390,26 @@
 
 
 /***********************************
-            Slide
+            LeftStretch
 ************************************/
-.slideLeft{
-	animation-name: slideLeft;
-	-webkit-animation-name: slideLeft;	
+.LeftStretch{
+	animation: LeftStretch 1.5s ease-out;
+	-webkit-animation: LeftStretch 1.5s ease-out;	
 
-	animation-duration: 1s;	
-	-webkit-animation-duration: 1s;
-
-	animation-timing-function: ease;	
-	-webkit-animation-timing-function: ease;		
-
+	transform-origin: 100% 0%;
+	-webkit-transform-origin: 100% 0%; 
 }
 
-@keyframes slideLeft {
-	from { transform: translateX(150%); opacity: 0; }		
-	to { transform: translateX(0%); opacity: 1; }	
+@keyframes LeftStretch {
+   0% { transform: scaleX(0);	}
+   100% { transform: scaleX(1); }			
+   80% { transform: scaleX(1.05);	}	
+	100% { transform: scaleX(1); }							
 }
 
-@-webkit-keyframes slideLeft {
-	from { -webkit-transform: translateX(150%); opacity: 0; }		
-	to { -webkit-transform: translateX(0%); opacity: 1; }
+@-webkit-keyframes LeftStretch {
+	0% { -webkit-transform: scaleX(0); }
+	100% { -webkit-transform: scaleX(1); }				
+	80% { -webkit-transform: scaleX(1.05);	}
+	100% { -webkit-transform: scaleX(1); }			
 }

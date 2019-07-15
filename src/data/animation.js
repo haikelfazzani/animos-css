@@ -1,5 +1,30 @@
 const codeAnimation = [
   {
+    name: "LeftStretch",
+    clx: `
+    .LeftStretch{
+      animation: LeftStretch 1.5s ease-out;
+      -webkit-animation: LeftStretch 1.5s ease-out;	
+    
+      transform-origin: 100% 0%;
+      -webkit-transform-origin: 100% 0%; 
+    }`,
+    keyframe: `
+    @keyframes LeftStretch {
+      0% { transform: scaleX(0);	}
+      100% { transform: scaleX(1); }			
+      80% { transform: scaleX(1.05);	}	
+     100% { transform: scaleX(1); }							
+    }
+   
+    @-webkit-keyframes LeftStretch {
+     0% { -webkit-transform: scaleX(0); }
+     100% { -webkit-transform: scaleX(1); }				
+     80% { -webkit-transform: scaleX(1.05);	}
+     100% { -webkit-transform: scaleX(1); }			
+    }`
+  },
+  {
     name: "heartBeat",
     clx: `
     .heartBeat {
@@ -261,24 +286,21 @@ const codeAnimation = [
     name: "pulse",
     clx: `
     .pulse {
-      -webkit-animation-name: pulse;
-      animation-name: pulse;
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s;
+      -webkit-animation: pulse infinite 2s linear;
+      animation: pulse infinite 2s linear;
     }`,
     keyframe: `
     @-webkit-keyframes pulse {
-      0% { -webkit-transform: scale(1); }
-      50% { -webkit-transform: scale(1.1); }
-      100% { -webkit-transform: scale(1); }
+      0% { -webkit-transform: scale(1); opacity: 1;}
+      50% { -webkit-transform: scale(1.1); opacity: 0.7;}
+      100% { -webkit-transform: scale(1); opacity: 1;}
     }
    
     @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-   `
+      0% { transform: scale(1); opacity: 1;}
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }`
   },
   {
     name: "pulseUpOut",
