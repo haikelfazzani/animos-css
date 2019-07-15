@@ -110,12 +110,10 @@ const codeAnimation = [
     name: "flipInX",
     clx: `
     .flipInX {
-      -webkit-backface-visibility: visible !important;
-      -webkit-animation-name: flipInX;
+      -webkit-backface-visibility: visible !important;  
       backface-visibility: visible !important;
-      animation-name: flipInX;
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s;
+      animation: flipInX 2s;
+      -webkit-animation: flipInX 2s;
     }`,
     keyframe: `
     @-webkit-keyframes flipInX {
@@ -136,12 +134,10 @@ const codeAnimation = [
     name: "flipInY",
     clx: `
     .flipInY {
-      -webkit-backface-visibility: visible !important;
-      -webkit-animation-name: flipInY;
+      -webkit-backface-visibility: visible !important;   
       backface-visibility: visible !important;
-      animation-name: flipInY;
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s;
+      animation: flipInY 2s;
+      -webkit-animation: flipInY 2s;
     }`,
     keyframe: `
     @-webkit-keyframes flipInY {
