@@ -153,7 +153,7 @@ const codeAnimation = [
       70% { transform: perspective(400px) rotatey(10deg); }
       100% { transform: perspective(400px) rotatey(0deg); opacity: 1; }
     }`
-  },  
+  },
   {
     name: "fadeIn",
     clx: `
@@ -196,6 +196,54 @@ const codeAnimation = [
     @keyframes fadeOut {
       from { opacity: 1; } 
       to { opacity: 0; }
+    }`
+  },
+  {
+    name: "rotateIn",
+    clx: `
+    .rotateIn {
+      animation: rotateIn 3s;
+      -webkit-animation: rotateIn 3s;
+     
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;	
+     
+      -webkit-transform-origin: center;
+      transform-origin: center;        
+    }`,
+    keyframe: `
+    @-webkit-keyframes rotateIn {
+      0% { -webkit-transform: rotate3d(0, 0, 1, 0); opacity: 0; }  
+      100% { -webkit-transform: rotate3d(0, 0, 1, -720deg); opacity: 1; }
+    }
+   
+    @keyframes rotateIn {
+      0% { transform: rotate3d(0, 0, 1, 0); opacity: 0; }  
+      100% { transform: rotate3d(0, 0, 1, -720deg); opacity: 1; }
+    }`
+  },
+  {
+    name: "rotateOut",
+    clx: `
+    .rotateOut {
+      animation: rotateOut 3s;
+      -webkit-animation: rotateOut 3s;
+     
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;	
+     
+      -webkit-transform-origin: center;
+      transform-origin: center;        
+    }`,
+    keyframe: `
+    @-webkit-keyframes rotateOut {
+      0% { -webkit-transform: rotate3d(0, 0, 1, -720deg); opacity: 1; }  
+      100% { -webkit-transform: rotate3d(0, 0, 1, 0); opacity: 0; }
+    }
+   
+    @keyframes rotateOut {
+      0% { transform: rotate3d(0, 0, 1, -720deg); opacity: 1; }  
+      100% { transform: rotate3d(0, 0, 1, 0); opacity: 0; }
     }`
   },
   {

@@ -1,3 +1,5 @@
+ /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+
 /***********************************
             Spin
 ************************************/
@@ -334,32 +336,6 @@
    animation-duration: 2s;
 }
 
-
-/***********************************
-            Text Expand
-************************************/
-.textExpand {
-   -webkit-animation-name: textExpand;
-   animation-name: textExpand;
-   -webkit-animation-duration: 4s;
-   animation-duration: 4s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
-}
-
-@-webkit-keyframes textExpand {
-   0% { letter-spacing: -0.5em; opacity: 0; }
-   50% { letter-spacing: 0; }
-   100% { opacity: 1; }
-}
-
-@keyframes textExpand {
-   0% { letter-spacing: -0.5em; opacity: 0; }
-   50% { letter-spacing: 0; }
-   100% { opacity: 1; }
-}
- 
-
 /***********************************
             Wiggle
 ************************************/
@@ -438,3 +414,75 @@
 	100% { -webkit-transform: translateX(0%); opacity: 1; }
 }
 
+/***********************************
+            Text Expand
+************************************/
+.textExpand {
+   -webkit-animation-name: textExpand;
+   animation-name: textExpand;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+@-webkit-keyframes textExpand {
+   0% { letter-spacing: -0.5em; opacity: 0; }
+   50% { letter-spacing: 0; }
+   100% { opacity: 1; }
+}
+
+@keyframes textExpand {
+   0% { letter-spacing: -0.5em; opacity: 0; }
+   50% { letter-spacing: 0; }
+   100% { opacity: 1; }
+}
+
+
+
+
+
+.rotateIn {
+   animation: rotateIn 3s;
+   -webkit-animation: rotateIn 3s;
+  
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;	
+  
+   -webkit-transform-origin: center;
+   transform-origin: center;        
+}
+  
+  
+@-webkit-keyframes rotateIn {
+   0% { -webkit-transform: rotate3d(0, 0, 1, 0); opacity: 0; }  
+   100% { -webkit-transform: rotate3d(0, 0, 1, -720deg); opacity: 1; }
+}
+
+@keyframes rotateIn {
+   0% { transform: rotate3d(0, 0, 1, 0); opacity: 0; }  
+   100% { transform: rotate3d(0, 0, 1, -720deg); opacity: 1; }
+}
+
+
+.rotateOut {
+   animation: rotateOut 3s;
+   -webkit-animation: rotateOut 3s;
+  
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;	
+  
+   -webkit-transform-origin: center;
+   transform-origin: center;        
+}
+  
+  
+@-webkit-keyframes rotateOut {
+   0% { -webkit-transform: rotate3d(0, 0, 1, -720deg); opacity: 1; }  
+   100% { -webkit-transform: rotate3d(0, 0, 1, 0); opacity: 0; }
+}
+
+@keyframes rotateOut {
+   0% { transform: rotate3d(0, 0, 1, -720deg); opacity: 1; }  
+   100% { transform: rotate3d(0, 0, 1, 0); opacity: 0; }
+}

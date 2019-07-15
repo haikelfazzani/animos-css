@@ -12,6 +12,8 @@ const animOptions = [
 
   { val: "heartBeat", txt: "heartBeat" },
 
+  { val: "rotateIn", txt: "rotateIn" },
+  { val: "rotateOut", txt: "rotateOut" },
   { val: "rotate-x180", txt: "rotate-x180" },
   { val: "rotate-x360", txt: "rotate-x360" },
   { val: "rotate-y180", txt: "rotate-y180" },
