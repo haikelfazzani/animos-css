@@ -14,8 +14,8 @@ export default function Buttons() {
   return (
     <>
       <div className="row mx-auto mb-3">
-        <div className="col-md-3 mb-3"><button className="but button2">hover me</button></div>
         <div className="col-md-3 mb-3"><button className="but button1">hover me</button></div>
+        <div className="col-md-3 mb-3"><button className="but button2">hover me</button></div>        
         <div className="col-md-3 mb-3"><button className="but button3">hover me</button></div>
         <div className="col-md-3"><button className="but button4">hover me</button></div>
       </div>
