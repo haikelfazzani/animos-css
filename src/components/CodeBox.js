@@ -40,7 +40,7 @@ export default class CodeBox extends Component {
         </button>
 
         <textarea
-          className="code-box flipInX"
+          className="code-box flipInX min-h200"
           value={code}
           onChange={handleChange}
           hidden={isHide}

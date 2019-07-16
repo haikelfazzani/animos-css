@@ -5,9 +5,12 @@ const btnOptions = [
   { val: "button4", txt: "button4" },
   { val: "button5", txt: "button5" },
   { val: "button6", txt: "button6" },
+  { val: "button7", txt: "button7" },
+  { val: "button8", txt: "button8" },
 ];
 
 const standCode = `
+  /* button common style */
   .but {
     display: inline-block;
     font-weight: 600;
@@ -18,8 +21,9 @@ const standCode = `
     font-size: 14px;
     line-height: 1.5;
     border-radius: .25rem;  
-
+  
     text-transform: uppercase;  
+    text-decoration: none;
     cursor: pointer;    
     overflow: hidden;  
     position: relative;
@@ -29,8 +33,6 @@ const btnData = [
   {
     name: "button1",
     clx: `
-    ${standCode}
-
     .button1 { color: #c21851 !important; border: 1px solid #c21851;  }
     
     .button1::before {    
@@ -54,8 +56,6 @@ const btnData = [
   {
     name: "button2",
     clx: `
-    ${standCode}
-
     .button2 {  
       border: 1px solid #00bcd4;
       color: #ffffff;
@@ -82,8 +82,6 @@ const btnData = [
   {
     name: "button3",
     clx: `
-    ${standCode}
-
     .button3 {  
       border: 1px solid #ffc107;
       color: #ffc107;
@@ -109,8 +107,6 @@ const btnData = [
   {
     name: "button4",
     clx: `
-    ${standCode}
-
     .button4 {  
       border: 1px solid #2cca50;
       color: #2cca50;
@@ -123,8 +119,6 @@ const btnData = [
   {
     name: "button5",
     clx: `
-    ${standCode}
-
     .button5 { 
       color: #F44336 !important; 
       border: 1px solid #F44336;  
@@ -150,8 +144,6 @@ const btnData = [
   {
     name: "button6",
     clx: `
-    ${standCode}
-
     .button6 {  
       border: 1px solid #272727;
       color: #ffffff;
@@ -174,6 +166,42 @@ const btnData = [
     .button6:hover::before { height: 0; }
     `
   },
+  {
+    name: "button7",
+    clx: `
+    .button7 {  
+      background-color: #9e9e9e;
+      border: 1px solid #9e9e9e;
+      color: #ffffff;
+      transition: .5s;
+    }
+    
+    .button7:hover { color: #9e9e9e; background-color: inherit;  }
+    `
+  },
+  {
+    name: "button8",
+    clx: `
+    .button8 { color: #ff9800 !important; border: 1px solid #ff9800;  }
+    
+    .button8::before {    
+      width: 100%;
+      height: 0;  
+      background-color: #ff9800;
+      content: "";
+      position: absolute;  
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      z-index: -1;
+      transition: all 0.5s ease;
+    }
+
+    .button8:hover { color: #fff !important; }
+
+    .button8:hover::before { height: 245%; }
+    `
+  },
 ];
 
-export { btnData, btnOptions };
+export { btnData, btnOptions, standCode };

@@ -10,6 +10,7 @@
   border-radius: .25rem;  
 
   text-transform: uppercase;  
+  text-decoration: none;
   cursor: pointer;    
   overflow: hidden;  
   position: relative;
@@ -146,3 +147,60 @@
 }
 
 .button6:hover::before { height: 0; }
+
+/*********************
+      Button 7
+**********************/
+.button7 {  
+  background-color: #9e9e9e;
+  border: 1px solid #9e9e9e;
+  color: #ffffff;
+  transition: .5s;
+}
+
+.button7:hover { color: #9e9e9e; background-color: inherit;  }
+
+
+/*********************
+      Button 8
+**********************/
+.button8 { color: #ff9800 !important; border: 1px solid #ff9800;  }
+    
+.button8::before {    
+  width: 100%;
+  height: 0;  
+  background-color: #ff9800;
+  content: "";
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.button8:hover { color: #fff !important; }
+
+.button8:hover::before { height: 245%; }
+
+/*********************
+      Button 9
+**********************/
+.button9 { color: #ff9800 !important; border: 0;  }
+    
+.button9::before {    
+  width: 100%;
+  height: 0;  
+  background-color: #ff9800;
+  content: "";
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.button9:hover { color: #fff !important; }
+
+.button9:hover::before { height: 370%; }

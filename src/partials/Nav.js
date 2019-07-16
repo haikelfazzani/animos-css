@@ -10,7 +10,7 @@ export default function Nav() {
   const [showDrop, setShowDrop] = useState(false)
 
   React.useEffect(() => {
-    changeThme ? setTheme({ back: "#fff", color: "#000" }) :
+    changeThme ? setTheme({ back: "#f5f5f5", color: "#000" }) :
       setTheme({ back: "#3a3a3a", color: "#fff" });
 
     document.body.style.backgroundColor = theme.back;

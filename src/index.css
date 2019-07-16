@@ -28,6 +28,8 @@ body {
   font-weight: 600; 
 }
 
+*:focus {outline:none !important}
+
 .container { position: relative; }
 
 .jumbotron { background-color: inherit !important; }
@@ -37,7 +39,7 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 18px; }
 /*
   Nav
 */
-.nav-link:hover, .nav-link:focus, .nav-link:active { color: #ffffff !important; }
+.nav-link:hover, .nav-link:focus, .nav-link:active { color: #000000 !important; }
 
 .nav-link, .btn-black {    
   font-size: 14px;
@@ -48,7 +50,7 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 18px; }
 .navbar-nav {  line-height: 2; }
 
 .navbar, footer {
-  background-color: #282c34 !important;
+  /*background-color: #282c34 !important;*/
   line-height: 2;  
 }
 
@@ -60,7 +62,9 @@ h1, .cover-heading { font-family: Pacifico-Regular; font-size: 18px; }
 .font-s12 { font-size: 12px !important; }
 .font-s14 { font-size: 14px !important; }
 
+.min-h200 { min-height: 200px; }
 .max-w40 { max-width: 40%;}
+
 .w-30 { width: 30%; }
 
 .fixed-bottom { z-index: 1; }
