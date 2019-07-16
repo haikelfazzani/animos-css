@@ -14,15 +14,15 @@ export default function Buttons() {
   return (
     <>
       <div className="row mx-auto mb-3">
-        <div className="col-md-3 mb-3"><button className="but button1">hover me</button></div>
-        <div className="col-md-3 mb-3"><button className="but button2">hover me</button></div>        
-        <div className="col-md-3 mb-3"><button className="but button3">hover me</button></div>
-        <div className="col-md-3"><button className="but button4">hover me</button></div>
+        <div className="col-md-3 mb-3"><button className="but button1">button1</button></div>
+        <div className="col-md-3 mb-3"><button className="but button2">button2</button></div>        
+        <div className="col-md-3 mb-3"><button className="but button3">button3</button></div>
+        <div className="col-md-3"><button className="but button4">button4</button></div>
       </div>
 
       <div className="row mx-auto mb-3">        
-        <div className="col-md-3 mb-3"><button className="but button5">hover me</button></div>
-        <div className="col-md-3"><button className="but button6">hover me</button></div>
+        <div className="col-md-3 mb-3"><button className="but button5">button5</button></div>
+        <div className="col-md-3"><button className="but button6">button6</button></div>
       </div>
 
       <Select clx="form-control w-30 mx-auto mt-5 mb-3" name="buttons"
